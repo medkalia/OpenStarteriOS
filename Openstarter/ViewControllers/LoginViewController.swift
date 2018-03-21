@@ -23,6 +23,11 @@ class LoginViewController: UIViewController {
     // Remove permissions you don't need
     
     private let readPermissions: [ReadPermission] = [ .publicProfile, .email, .userFriends, .custom("user_posts") ]
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // Do any additional setup after loading the view, typically from a nib.
+    }
 
     @IBAction func didTapLoginButton(_ sender: LoginButton) {
         // Regular login attempt. Add the code to handle the login by email and password.
@@ -86,9 +91,9 @@ class LoginViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "Done", style: UIAlertActionStyle.default, handler: nil))
         self.present(alert, animated: true, completion: nil)*/
         
-        let storyboard = UIStoryboard(name: "Home", bundle: nil)
-        let MainVC = storyboard.instantiateViewController(withIdentifier: "MainTableViewController")
-        self.present(MainVC, animated: true, completion: nil)
+       // let storyboard = UIStoryboard(name: "Home", bundle: nil)
+        //let MainVC = storyboard.instantiateViewController(withIdentifier: "MainTableViewController")
+        //self.present(MainVC, animated: true, completion: nil)
         
         fetchProjects(url: "http://localhost/AndroidWS/web/app.php/project/getAll")
     }
