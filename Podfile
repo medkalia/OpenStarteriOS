@@ -16,6 +16,7 @@ target 'Openstarter' do
     pod 'FoldingCell'
     pod 'Alamofire'
     pod 'AlamofireImage'
+    pod 'AKSideMenu'
 
   target 'OpenstarterTests' do
     inherit! :search_paths

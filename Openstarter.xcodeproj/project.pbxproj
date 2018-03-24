@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		4C186086A6840EBA57BBD61B /* Pods_OpenstarterUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F10178F838181B844F42168 /* Pods_OpenstarterUITests.framework */; };
 		56054ADACDFBA308F0CFC0E3 /* Pods_Openstarter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F34A6828CA93A88FEB9B5E6 /* Pods_Openstarter.framework */; };
+		C8C515CC20656D2E003B9B74 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C515CB20656D2E003B9B74 /* MenuViewController.swift */; };
+		C8C515E620657B9A003B9B74 /* LeftMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C515E520657B9A003B9B74 /* LeftMenuViewController.swift */; };
 		C8EAD89A2060041B00A8FC01 /* DemoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8EAD8862060041B00A8FC01 /* DemoCell.swift */; };
 		C8EAD89B2060041B00A8FC01 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8EAD8872060041B00A8FC01 /* MainTableViewController.swift */; };
 		C8EAD89E2060041B00A8FC01 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8EAD88B2060041B00A8FC01 /* Main.storyboard */; };
@@ -67,6 +69,8 @@
 		871DE5FC5ACAC101BE4DE396 /* Pods-OpenstarterTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenstarterTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OpenstarterTests/Pods-OpenstarterTests.release.xcconfig"; sourceTree = "<group>"; };
 		8F34A6828CA93A88FEB9B5E6 /* Pods_Openstarter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Openstarter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		931ECA1D2F633EC31EC4346E /* Pods-Openstarter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Openstarter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Openstarter/Pods-Openstarter.debug.xcconfig"; sourceTree = "<group>"; };
+		C8C515CB20656D2E003B9B74 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		C8C515E520657B9A003B9B74 /* LeftMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftMenuViewController.swift; sourceTree = "<group>"; };
 		C8EAD8862060041B00A8FC01 /* DemoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoCell.swift; sourceTree = "<group>"; };
 		C8EAD8872060041B00A8FC01 /* MainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 		C8EAD88C2060041B00A8FC01 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -247,6 +251,8 @@
 			children = (
 				C8ED4C92205DCFB40045B2AF /* FacebookAPIManager.swift */,
 				C8ED4C93205DCFB40045B2AF /* NetworkingManager.swift */,
+				C8C515E520657B9A003B9B74 /* LeftMenuViewController.swift */,
+				C8C515CB20656D2E003B9B74 /* MenuViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -458,6 +464,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Openstarter/Pods-Openstarter-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/AKSideMenu/AKSideMenu.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
@@ -474,6 +481,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AKSideMenu.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
@@ -590,6 +598,8 @@
 				C8ED4C97205DCFB40045B2AF /* LoginButton.swift in Sources */,
 				C8EAD89A2060041B00A8FC01 /* DemoCell.swift in Sources */,
 				C8ED4C94205DCFB40045B2AF /* FacebookPost.swift in Sources */,
+				C8C515CC20656D2E003B9B74 /* MenuViewController.swift in Sources */,
+				C8C515E620657B9A003B9B74 /* LeftMenuViewController.swift in Sources */,
 				C8ED4C19205DB7760045B2AF /* AppDelegate.swift in Sources */,
 				C8EAD89B2060041B00A8FC01 /* MainTableViewController.swift in Sources */,
 				C8ED4C21205DB7760045B2AF /* Openstarter.xcdatamodeld in Sources */,
