@@ -28,7 +28,7 @@ class ViewController: UIViewController {
     
     // Use this method whenever you want to present your Login Screen
     private func presentLoginScreenViewController() {
-        let storyboard = UIStoryboard(name: "LoginScreen", bundle: nil)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let loginVC = storyboard.instantiateViewController(withIdentifier: "LoginViewControllerIdentifier")
         self.present(loginVC, animated: true, completion: nil)
     }

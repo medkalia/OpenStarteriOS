@@ -12,8 +12,6 @@
 		C8C515CC20656D2E003B9B74 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C515CB20656D2E003B9B74 /* MenuViewController.swift */; };
 		C8C515E620657B9A003B9B74 /* LeftMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C515E520657B9A003B9B74 /* LeftMenuViewController.swift */; };
 		C8EAD89A2060041B00A8FC01 /* DemoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8EAD8862060041B00A8FC01 /* DemoCell.swift */; };
-		C8EAD89B2060041B00A8FC01 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8EAD8872060041B00A8FC01 /* MainTableViewController.swift */; };
-		C8EAD89E2060041B00A8FC01 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8EAD88B2060041B00A8FC01 /* Main.storyboard */; };
 		C8EAD8A02060041B00A8FC01 /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C8EAD88F2060041B00A8FC01 /* OpenSans-Semibold.ttf */; };
 		C8EAD8A12060041B00A8FC01 /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C8EAD8902060041B00A8FC01 /* OpenSans-Light.ttf */; };
 		C8EAD8A22060041B00A8FC01 /* OpenSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C8EAD8912060041B00A8FC01 /* OpenSans-Italic.ttf */; };
@@ -24,7 +22,6 @@
 		C8EAD8A72060041B00A8FC01 /* OpenSans-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C8EAD8962060041B00A8FC01 /* OpenSans-ExtraBoldItalic.ttf */; };
 		C8EAD8A82060041B00A8FC01 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C8EAD8972060041B00A8FC01 /* OpenSans-Regular.ttf */; };
 		C8EAD8A92060041B00A8FC01 /* OpenSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C8EAD8982060041B00A8FC01 /* OpenSans-BoldItalic.ttf */; };
-		C8EAD8AD206005D500A8FC01 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8EAD8AB206005D500A8FC01 /* Home.storyboard */; };
 		C8ED4C19205DB7760045B2AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8ED4C18205DB7760045B2AF /* AppDelegate.swift */; };
 		C8ED4C1B205DB7760045B2AF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8ED4C1A205DB7760045B2AF /* ViewController.swift */; };
 		C8ED4C21205DB7760045B2AF /* Openstarter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C8ED4C1F205DB7760045B2AF /* Openstarter.xcdatamodeld */; };
@@ -32,7 +29,7 @@
 		C8ED4C26205DB7760045B2AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8ED4C24205DB7760045B2AF /* LaunchScreen.storyboard */; };
 		C8ED4C94205DCFB40045B2AF /* FacebookPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8ED4C87205DCFB30045B2AF /* FacebookPost.swift */; };
 		C8ED4C95205DCFB40045B2AF /* FacebookUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8ED4C88205DCFB30045B2AF /* FacebookUser.swift */; };
-		C8ED4C96205DCFB40045B2AF /* LoginScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8ED4C8A205DCFB30045B2AF /* LoginScreen.storyboard */; };
+		C8ED4C96205DCFB40045B2AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8ED4C8A205DCFB30045B2AF /* Main.storyboard */; };
 		C8ED4C97205DCFB40045B2AF /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8ED4C8B205DCFB30045B2AF /* LoginButton.swift */; };
 		C8ED4C98205DCFB40045B2AF /* TwitterLoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8ED4C8C205DCFB30045B2AF /* TwitterLoginButton.swift */; };
 		C8ED4C99205DCFB40045B2AF /* LoginTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8ED4C8D205DCFB30045B2AF /* LoginTextField.swift */; };
@@ -40,6 +37,7 @@
 		C8ED4C9B205DCFB40045B2AF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8ED4C90205DCFB40045B2AF /* LoginViewController.swift */; };
 		C8ED4C9C205DCFB40045B2AF /* FacebookAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8ED4C92205DCFB40045B2AF /* FacebookAPIManager.swift */; };
 		C8ED4C9D205DCFB40045B2AF /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8ED4C93205DCFB40045B2AF /* NetworkingManager.swift */; };
+		C8F412F52066EC70007A5C38 /* ContentMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F412F42066EC70007A5C38 /* ContentMenuViewController.swift */; };
 		EDF37CF0FFD9FC605E76FBDD /* Pods_OpenstarterTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BF6AF46334E984866BB4751 /* Pods_OpenstarterTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -72,8 +70,6 @@
 		C8C515CB20656D2E003B9B74 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		C8C515E520657B9A003B9B74 /* LeftMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftMenuViewController.swift; sourceTree = "<group>"; };
 		C8EAD8862060041B00A8FC01 /* DemoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoCell.swift; sourceTree = "<group>"; };
-		C8EAD8872060041B00A8FC01 /* MainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
-		C8EAD88C2060041B00A8FC01 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C8EAD88F2060041B00A8FC01 /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
 		C8EAD8902060041B00A8FC01 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
 		C8EAD8912060041B00A8FC01 /* OpenSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Italic.ttf"; sourceTree = "<group>"; };
@@ -84,7 +80,6 @@
 		C8EAD8962060041B00A8FC01 /* OpenSans-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
 		C8EAD8972060041B00A8FC01 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		C8EAD8982060041B00A8FC01 /* OpenSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-BoldItalic.ttf"; sourceTree = "<group>"; };
-		C8EAD8AC206005D500A8FC01 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Home.storyboard; sourceTree = "<group>"; };
 		C8ED4C15205DB7760045B2AF /* Openstarter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Openstarter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8ED4C18205DB7760045B2AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C8ED4C1A205DB7760045B2AF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -96,7 +91,7 @@
 		C8ED4C37205DB7760045B2AF /* OpenstarterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenstarterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8ED4C87205DCFB30045B2AF /* FacebookPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookPost.swift; sourceTree = "<group>"; };
 		C8ED4C88205DCFB30045B2AF /* FacebookUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookUser.swift; sourceTree = "<group>"; };
-		C8ED4C8A205DCFB30045B2AF /* LoginScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LoginScreen.storyboard; sourceTree = "<group>"; };
+		C8ED4C8A205DCFB30045B2AF /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		C8ED4C8B205DCFB30045B2AF /* LoginButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginButton.swift; sourceTree = "<group>"; };
 		C8ED4C8C205DCFB30045B2AF /* TwitterLoginButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterLoginButton.swift; sourceTree = "<group>"; };
 		C8ED4C8D205DCFB30045B2AF /* LoginTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginTextField.swift; sourceTree = "<group>"; };
@@ -104,6 +99,7 @@
 		C8ED4C90205DCFB40045B2AF /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C8ED4C92205DCFB40045B2AF /* FacebookAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookAPIManager.swift; sourceTree = "<group>"; };
 		C8ED4C93205DCFB40045B2AF /* NetworkingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
+		C8F412F42066EC70007A5C38 /* ContentMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentMenuViewController.swift; sourceTree = "<group>"; };
 		DD185EAE0A18E4ED6970C7C1 /* Pods-Openstarter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Openstarter.release.xcconfig"; path = "Pods/Target Support Files/Pods-Openstarter/Pods-Openstarter.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -204,7 +200,6 @@
 				C8ED4C86205DCFB30045B2AF /* Models */,
 				C8ED4C8F205DCFB40045B2AF /* ViewControllers */,
 				C8ED4C18205DB7760045B2AF /* AppDelegate.swift */,
-				C8EAD8862060041B00A8FC01 /* DemoCell.swift */,
 				C8ED4C22205DB7760045B2AF /* Assets.xcassets */,
 				C8ED4C24205DB7760045B2AF /* LaunchScreen.storyboard */,
 				C8ED4C27205DB7760045B2AF /* Info.plist */,
@@ -225,9 +220,7 @@
 		C8ED4C89205DCFB30045B2AF /* Interface */ = {
 			isa = PBXGroup;
 			children = (
-				C8EAD8AB206005D500A8FC01 /* Home.storyboard */,
-				C8EAD88B2060041B00A8FC01 /* Main.storyboard */,
-				C8ED4C8A205DCFB30045B2AF /* LoginScreen.storyboard */,
+				C8ED4C8A205DCFB30045B2AF /* Main.storyboard */,
 				C8ED4C8B205DCFB30045B2AF /* LoginButton.swift */,
 				C8ED4C8C205DCFB30045B2AF /* TwitterLoginButton.swift */,
 				C8ED4C8D205DCFB30045B2AF /* LoginTextField.swift */,
@@ -239,9 +232,12 @@
 		C8ED4C8F205DCFB40045B2AF /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				C8EAD8872060041B00A8FC01 /* MainTableViewController.swift */,
+				C8C515E520657B9A003B9B74 /* LeftMenuViewController.swift */,
+				C8C515CB20656D2E003B9B74 /* MenuViewController.swift */,
 				C8ED4C90205DCFB40045B2AF /* LoginViewController.swift */,
 				C8ED4C1A205DB7760045B2AF /* ViewController.swift */,
+				C8F412F42066EC70007A5C38 /* ContentMenuViewController.swift */,
+				C8EAD8862060041B00A8FC01 /* DemoCell.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -251,8 +247,6 @@
 			children = (
 				C8ED4C92205DCFB40045B2AF /* FacebookAPIManager.swift */,
 				C8ED4C93205DCFB40045B2AF /* NetworkingManager.swift */,
-				C8C515E520657B9A003B9B74 /* LeftMenuViewController.swift */,
-				C8C515CB20656D2E003B9B74 /* MenuViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -373,7 +367,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C8EAD89E2060041B00A8FC01 /* Main.storyboard in Resources */,
 				C8EAD8A32060041B00A8FC01 /* OpenSans-ExtraBold.ttf in Resources */,
 				C8EAD8A42060041B00A8FC01 /* OpenSans-LightItalic.ttf in Resources */,
 				C8ED4C26205DB7760045B2AF /* LaunchScreen.storyboard in Resources */,
@@ -381,12 +374,11 @@
 				C8EAD8A22060041B00A8FC01 /* OpenSans-Italic.ttf in Resources */,
 				C8EAD8A82060041B00A8FC01 /* OpenSans-Regular.ttf in Resources */,
 				C8EAD8A92060041B00A8FC01 /* OpenSans-BoldItalic.ttf in Resources */,
-				C8ED4C96205DCFB40045B2AF /* LoginScreen.storyboard in Resources */,
+				C8ED4C96205DCFB40045B2AF /* Main.storyboard in Resources */,
 				C8EAD8A72060041B00A8FC01 /* OpenSans-ExtraBoldItalic.ttf in Resources */,
 				C8EAD8A02060041B00A8FC01 /* OpenSans-Semibold.ttf in Resources */,
 				C8EAD8A12060041B00A8FC01 /* OpenSans-Light.ttf in Resources */,
 				C8EAD8A62060041B00A8FC01 /* OpenSans-SemiboldItalic.ttf in Resources */,
-				C8EAD8AD206005D500A8FC01 /* Home.storyboard in Resources */,
 				C8EAD8A52060041B00A8FC01 /* OpenSans-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -594,6 +586,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C8ED4C1B205DB7760045B2AF /* ViewController.swift in Sources */,
+				C8F412F52066EC70007A5C38 /* ContentMenuViewController.swift in Sources */,
 				C8ED4C99205DCFB40045B2AF /* LoginTextField.swift in Sources */,
 				C8ED4C97205DCFB40045B2AF /* LoginButton.swift in Sources */,
 				C8EAD89A2060041B00A8FC01 /* DemoCell.swift in Sources */,
@@ -601,7 +594,6 @@
 				C8C515CC20656D2E003B9B74 /* MenuViewController.swift in Sources */,
 				C8C515E620657B9A003B9B74 /* LeftMenuViewController.swift in Sources */,
 				C8ED4C19205DB7760045B2AF /* AppDelegate.swift in Sources */,
-				C8EAD89B2060041B00A8FC01 /* MainTableViewController.swift in Sources */,
 				C8ED4C21205DB7760045B2AF /* Openstarter.xcdatamodeld in Sources */,
 				C8ED4C98205DCFB40045B2AF /* TwitterLoginButton.swift in Sources */,
 				C8ED4C95205DCFB40045B2AF /* FacebookUser.swift in Sources */,
@@ -642,22 +634,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		C8EAD88B2060041B00A8FC01 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C8EAD88C2060041B00A8FC01 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		C8EAD8AB206005D500A8FC01 /* Home.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C8EAD8AC206005D500A8FC01 /* Base */,
-			);
-			name = Home.storyboard;
-			sourceTree = "<group>";
-		};
 		C8ED4C24205DB7760045B2AF /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

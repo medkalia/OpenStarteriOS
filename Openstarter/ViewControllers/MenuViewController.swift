@@ -11,12 +11,6 @@ import AKSideMenu
 
 class MenuViewController: AKSideMenu, AKSideMenuDelegate {
     
-    //    override public func awakeFromNib() {
-    //        self.contentViewController = self.storyboard!.instantiateViewController(withIdentifier: "contentViewController")
-    //        self.leftMenuViewController = self.storyboard!.instantiateViewController(withIdentifier: "leftMenuViewController")
-    //        //self.rightMenuViewController = self.storyboard!.instantiateViewController(withIdentifier: "rightMenuViewController")
-    //    }
-    
     override public func awakeFromNib() {
         super.awakeFromNib()
         self.menuPreferredStatusBarStyle = .lightContent
