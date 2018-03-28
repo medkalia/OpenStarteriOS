@@ -43,7 +43,9 @@ PODS:
     - FBSDKCoreKit
   - FBSDKShareKit (4.31.1):
     - FBSDKCoreKit (~> 4.31.1)
-  - FoldingCell (3.0.3)
+  - FoldingCell (3.0.5)
+  - paper-onboarding (4.0.2)
+  - SwiftyJSON (4.0.0)
   - TwitterCore (3.1.0)
   - TwitterKit (3.3.0):
     - TwitterCore (>= 3.1.0)
@@ -57,6 +59,8 @@ DEPENDENCIES:
   - FacebookLogin
   - FacebookShare
   - FoldingCell
+  - paper-onboarding
+  - SwiftyJSON
   - TwitterCore
   - TwitterKit
 
@@ -72,10 +76,12 @@ SPEC CHECKSUMS:
   FBSDKCoreKit: e08ccfcefa7bc1347a07c276dac9bf6c7fe57024
   FBSDKLoginKit: 99797ac39252fef6f72600b886f6ee60b4b29cab
   FBSDKShareKit: e640c41c9fcd61929eeb3d0c21ad335103e7cb62
-  FoldingCell: 76ce5d1ddba34c6d25548b473b7b51585e992da0
+  FoldingCell: 18daed710910823bc8457c3fba076a2408f21f0e
+  paper-onboarding: e6e2778c4e8de8db1d798bb7e3b4922e91fb7f99
+  SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
   TwitterCore: 644d59e75abccb26cf0a9050d2c4dea0e5412241
   TwitterKit: a2e60ddcedbf54091eac6f27685ca7a87681e1d7
 
-PODFILE CHECKSUM: 751d9b40885581a5fcfa217ec5490489a3918d20
+PODFILE CHECKSUM: 1a50e79e5ef9b63b051d61c23e9e7e4addb56386
 
 COCOAPODS: 1.4.0

@@ -17,6 +17,8 @@ target 'Openstarter' do
     pod 'Alamofire'
     pod 'AlamofireImage'
     pod 'AKSideMenu'
+    pod 'paper-onboarding'
+    pod 'SwiftyJSON'
 
   target 'OpenstarterTests' do
     inherit! :search_paths
