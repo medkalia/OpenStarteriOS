@@ -13,6 +13,8 @@
 		C8626874206D719900628A33 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8626873206D719900628A33 /* CardView.swift */; };
 		C8626877206D778D00628A33 /* ConnectionToServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8626876206D778D00628A33 /* ConnectionToServer.swift */; };
 		C862687B206DA0E000628A33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C862687A206DA0DF00628A33 /* Assets.xcassets */; };
+		C862687D206DA31000628A33 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C862687C206DA31000628A33 /* UserProfileViewController.swift */; };
+		C862687F206DA6BC00628A33 /* CompleteRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C862687E206DA6BC00628A33 /* CompleteRegisterViewController.swift */; };
 		C8C515CC20656D2E003B9B74 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C515CB20656D2E003B9B74 /* MenuViewController.swift */; };
 		C8C515E620657B9A003B9B74 /* LeftMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C515E520657B9A003B9B74 /* LeftMenuViewController.swift */; };
 		C8EAD89A2060041B00A8FC01 /* DemoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8EAD8862060041B00A8FC01 /* DemoCell.swift */; };
@@ -75,6 +77,8 @@
 		C8626873206D719900628A33 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		C8626876206D778D00628A33 /* ConnectionToServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionToServer.swift; sourceTree = "<group>"; };
 		C862687A206DA0DF00628A33 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C862687C206DA31000628A33 /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
+		C862687E206DA6BC00628A33 /* CompleteRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteRegisterViewController.swift; sourceTree = "<group>"; };
 		C8C515CB20656D2E003B9B74 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		C8C515E520657B9A003B9B74 /* LeftMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftMenuViewController.swift; sourceTree = "<group>"; };
 		C8EAD8862060041B00A8FC01 /* DemoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoCell.swift; sourceTree = "<group>"; };
@@ -252,12 +256,14 @@
 			children = (
 				C8C515E520657B9A003B9B74 /* LeftMenuViewController.swift */,
 				C8C515CB20656D2E003B9B74 /* MenuViewController.swift */,
-				C8ED4C90205DCFB40045B2AF /* LoginViewController.swift */,
 				C8ED4C1A205DB7760045B2AF /* ViewController.swift */,
 				C8F412F42066EC70007A5C38 /* ContentMenuViewController.swift */,
 				C8EAD8862060041B00A8FC01 /* DemoCell.swift */,
+				C8ED4C90205DCFB40045B2AF /* LoginViewController.swift */,
 				F50198E92069A9BD006E2D38 /* RegisterViewController.swift */,
 				C8626871206D664900628A33 /* ProjectDetailsViewController.swift */,
+				C862687E206DA6BC00628A33 /* CompleteRegisterViewController.swift */,
+				C862687C206DA31000628A33 /* UserProfileViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -611,6 +617,7 @@
 			files = (
 				C8ED4C1B205DB7760045B2AF /* ViewController.swift in Sources */,
 				C8F412F52066EC70007A5C38 /* ContentMenuViewController.swift in Sources */,
+				C862687F206DA6BC00628A33 /* CompleteRegisterViewController.swift in Sources */,
 				C8ED4C99205DCFB40045B2AF /* LoginTextField.swift in Sources */,
 				C8ED4C97205DCFB40045B2AF /* LoginButton.swift in Sources */,
 				C8EAD89A2060041B00A8FC01 /* DemoCell.swift in Sources */,
@@ -625,6 +632,7 @@
 				C8626877206D778D00628A33 /* ConnectionToServer.swift in Sources */,
 				C8ED4C9C205DCFB40045B2AF /* FacebookAPIManager.swift in Sources */,
 				F50198EA2069A9BD006E2D38 /* RegisterViewController.swift in Sources */,
+				C862687D206DA31000628A33 /* UserProfileViewController.swift in Sources */,
 				C8ED4C9D205DCFB40045B2AF /* NetworkingManager.swift in Sources */,
 				C8626872206D664900628A33 /* ProjectDetailsViewController.swift in Sources */,
 				C8ED4C9B205DCFB40045B2AF /* LoginViewController.swift in Sources */,
