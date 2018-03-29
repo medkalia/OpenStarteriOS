@@ -40,12 +40,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="night-stars-wallpaper" translatesAutoresizingMaskIntoConstraints="NO" id="cja-Kd-yj9">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rS5-aT-149" userLabel="LoginFormContainerView">
                                 <rect key="frame" x="36" y="153" width="304" height="134"/>
                                 <subviews>
+                                    <view alpha="0.40000000000000002" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yg2-PB-xG2" customClass="CardView" customModule="Openstarter" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="-76" width="304" height="332"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="0.080000000000000002" colorSpace="calibratedRGB"/>
+                                    </view>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gtV-qs-nyA" userLabel="Username Text Field" customClass="LoginTextField" customModule="Openstarter" customModuleProvider="target">
                                         <rect key="frame" x="20" y="19.5" width="264" height="30"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -160,27 +162,25 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rVt-du-9ru">
                                 <rect key="frame" x="128" y="588" width="121" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="s'inscrire"/>
+                                <state key="normal" title="Sign up">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="wua-gM-Zdx" kind="show" id="I1h-Gr-3wm"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="rS5-aT-149" firstAttribute="leading" secondItem="4CQ-lm-TvN" secondAttribute="leadingMargin" constant="20" id="29X-iN-UWU"/>
                             <constraint firstItem="KRp-P8-73M" firstAttribute="top" secondItem="fwU-xu-6Uy" secondAttribute="bottom" id="9Dl-wc-Tkm"/>
                             <constraint firstItem="KRp-P8-73M" firstAttribute="centerX" secondItem="4CQ-lm-TvN" secondAttribute="centerX" id="Bun-aQ-Grb"/>
                             <constraint firstItem="fwU-xu-6Uy" firstAttribute="centerX" secondItem="4CQ-lm-TvN" secondAttribute="centerX" id="DwO-ap-QdQ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="rS5-aT-149" secondAttribute="trailing" constant="19" id="F5x-dY-hHQ"/>
-                            <constraint firstItem="cja-Kd-yj9" firstAttribute="height" secondItem="4CQ-lm-TvN" secondAttribute="height" id="Lc8-xc-ray"/>
                             <constraint firstItem="fwU-xu-6Uy" firstAttribute="top" secondItem="rS5-aT-149" secondAttribute="bottom" multiplier="1.05" id="S7r-BK-FwG"/>
-                            <constraint firstItem="cja-Kd-yj9" firstAttribute="width" secondItem="4CQ-lm-TvN" secondAttribute="width" id="VGd-88-sK2"/>
                             <constraint firstItem="fwU-xu-6Uy" firstAttribute="width" secondItem="4CQ-lm-TvN" secondAttribute="width" id="Z5X-CH-d3T"/>
                             <constraint firstItem="OIg-Zq-ngy" firstAttribute="top" secondItem="NSY-h8-A2N" secondAttribute="bottom" multiplier="4" constant="23" id="krr-JJ-AO7"/>
                             <constraint firstItem="OIg-Zq-ngy" firstAttribute="width" secondItem="4CQ-lm-TvN" secondAttribute="width" id="l31-3C-V63"/>
-                            <constraint firstItem="cja-Kd-yj9" firstAttribute="centerY" secondItem="4CQ-lm-TvN" secondAttribute="centerY" id="lNB-FM-L2y"/>
-                            <constraint firstItem="cja-Kd-yj9" firstAttribute="centerX" secondItem="4CQ-lm-TvN" secondAttribute="centerX" id="pUI-wW-1NU"/>
                             <constraint firstItem="rS5-aT-149" firstAttribute="top" secondItem="OIg-Zq-ngy" secondAttribute="bottom" multiplier="1.05" id="yfB-je-8qc"/>
                             <constraint firstItem="OIg-Zq-ngy" firstAttribute="centerX" secondItem="4CQ-lm-TvN" secondAttribute="centerX" id="zWr-Y2-SSG"/>
                         </constraints>
@@ -193,7 +193,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DCI-rr-jRU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1233" y="-270"/>
+            <point key="canvasLocation" x="1232.8" y="-270.31484257871068"/>
         </scene>
         <!--Menu-->
         <scene sceneID="W2H-vB-7hh">
@@ -238,7 +238,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gie-rs-Rql" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2038" y="515"/>
+            <point key="canvasLocation" x="1719" y="516"/>
         </scene>
         <!--inscription-->
         <scene sceneID="ERY-ul-eny">
@@ -268,6 +268,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
@@ -324,7 +325,7 @@
         <!--details-->
         <scene sceneID="K9f-Me-49M">
             <objects>
-                <viewController title="details" id="I2o-Xd-vsP" sceneMemberID="viewController">
+                <viewController title="details" id="I2o-Xd-vsP" customClass="ProjectDetailsViewController" customModule="Openstarter" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="exj-cj-Dj6"/>
                         <viewControllerLayoutGuide type="bottom" id="eaO-hJ-558"/>

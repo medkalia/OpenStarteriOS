@@ -15,6 +15,7 @@ import Alamofire
 class LoginViewController: UIViewController {
 
 
+    let cs = ConnectionToServer()
     @IBOutlet var usernameTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
 
@@ -22,11 +23,27 @@ class LoginViewController: UIViewController {
     // Add extra permissions you need
     // Remove permissions you don't need
     
+    var colors: [UIColor] = [UIColor(hue: 0.5444, saturation: 0.8, brightness: 0.54, alpha: 1.0), UIColor(hue: 0.5667, saturation: 0.99, brightness: 0.72, alpha: 1.0),UIColor(hue: 0.5833, saturation: 0.25, brightness: 0.27, alpha: 1.0), UIColor(hue: 0.8583, saturation: 0.16, brightness: 0.5, alpha: 1.0)]
+    
+    
     private let readPermissions: [ReadPermission] = [ .publicProfile, .email, .userFriends, .custom("user_posts") ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.startAnimation(index: 0)
+        
         
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    func startAnimation(index: Int) {
+        UIView.animate(withDuration: 2.5, delay: 0, options: UIViewAnimationOptions.allowUserInteraction, animations: {
+            self.view.backgroundColor = self.colors[index]
+        }) { (finished) in
+            var currentIndex = index + 1
+            if currentIndex == self.colors.count { currentIndex = 0 }
+            self.startAnimation(index: currentIndex)
+        }
     }
 
     @IBAction func didTapLoginButton(_ sender: LoginButton) {
@@ -95,7 +112,8 @@ class LoginViewController: UIViewController {
         //let MainVC = storyboard.instantiateViewController(withIdentifier: "MainTableViewController")
         //self.present(MainVC, animated: true, completion: nil)
         
-        fetchProjects(url: "http://localhost/AndroidWS/web/app.php/project/getAll")
+        
+        fetchProjects(url: cs.url+"/project/getAll")
     }
     
     

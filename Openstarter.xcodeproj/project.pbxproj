@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		4C186086A6840EBA57BBD61B /* Pods_OpenstarterUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F10178F838181B844F42168 /* Pods_OpenstarterUITests.framework */; };
 		56054ADACDFBA308F0CFC0E3 /* Pods_Openstarter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F34A6828CA93A88FEB9B5E6 /* Pods_Openstarter.framework */; };
+		C8626872206D664900628A33 /* ProjectDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8626871206D664900628A33 /* ProjectDetailsViewController.swift */; };
+		C8626874206D719900628A33 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8626873206D719900628A33 /* CardView.swift */; };
+		C8626877206D778D00628A33 /* ConnectionToServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8626876206D778D00628A33 /* ConnectionToServer.swift */; };
 		C8C515CC20656D2E003B9B74 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C515CB20656D2E003B9B74 /* MenuViewController.swift */; };
 		C8C515E620657B9A003B9B74 /* LeftMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C515E520657B9A003B9B74 /* LeftMenuViewController.swift */; };
 		C8EAD89A2060041B00A8FC01 /* DemoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8EAD8862060041B00A8FC01 /* DemoCell.swift */; };
@@ -68,6 +71,9 @@
 		871DE5FC5ACAC101BE4DE396 /* Pods-OpenstarterTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenstarterTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OpenstarterTests/Pods-OpenstarterTests.release.xcconfig"; sourceTree = "<group>"; };
 		8F34A6828CA93A88FEB9B5E6 /* Pods_Openstarter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Openstarter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		931ECA1D2F633EC31EC4346E /* Pods-Openstarter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Openstarter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Openstarter/Pods-Openstarter.debug.xcconfig"; sourceTree = "<group>"; };
+		C8626871206D664900628A33 /* ProjectDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailsViewController.swift; sourceTree = "<group>"; };
+		C8626873206D719900628A33 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		C8626876206D778D00628A33 /* ConnectionToServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionToServer.swift; sourceTree = "<group>"; };
 		C8C515CB20656D2E003B9B74 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		C8C515E520657B9A003B9B74 /* LeftMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftMenuViewController.swift; sourceTree = "<group>"; };
 		C8EAD8862060041B00A8FC01 /* DemoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoCell.swift; sourceTree = "<group>"; };
@@ -156,6 +162,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		C8626875206D775500628A33 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				C8626876206D778D00628A33 /* ConnectionToServer.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		C8EAD88E2060041B00A8FC01 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -196,6 +210,7 @@
 		C8ED4C17205DB7760045B2AF /* Openstarter */ = {
 			isa = PBXGroup;
 			children = (
+				C8626875206D775500628A33 /* Helpers */,
 				C8EAD88E2060041B00A8FC01 /* Fonts */,
 				C8ED4C89205DCFB30045B2AF /* Interface */,
 				C8ED4C91205DCFB40045B2AF /* Controllers */,
@@ -227,6 +242,7 @@
 				C8ED4C8C205DCFB30045B2AF /* TwitterLoginButton.swift */,
 				C8ED4C8D205DCFB30045B2AF /* LoginTextField.swift */,
 				C8ED4C8E205DCFB30045B2AF /* FacebookLoginButton.swift */,
+				C8626873206D719900628A33 /* CardView.swift */,
 			);
 			path = Interface;
 			sourceTree = "<group>";
@@ -241,6 +257,7 @@
 				C8F412F42066EC70007A5C38 /* ContentMenuViewController.swift */,
 				C8EAD8862060041B00A8FC01 /* DemoCell.swift */,
 				F50198E92069A9BD006E2D38 /* RegisterViewController.swift */,
+				C8626871206D664900628A33 /* ProjectDetailsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -599,14 +616,17 @@
 				C8EAD89A2060041B00A8FC01 /* DemoCell.swift in Sources */,
 				C8ED4C94205DCFB40045B2AF /* FacebookPost.swift in Sources */,
 				C8C515CC20656D2E003B9B74 /* MenuViewController.swift in Sources */,
+				C8626874206D719900628A33 /* CardView.swift in Sources */,
 				C8C515E620657B9A003B9B74 /* LeftMenuViewController.swift in Sources */,
 				C8ED4C19205DB7760045B2AF /* AppDelegate.swift in Sources */,
 				C8ED4C21205DB7760045B2AF /* Openstarter.xcdatamodeld in Sources */,
 				C8ED4C98205DCFB40045B2AF /* TwitterLoginButton.swift in Sources */,
 				C8ED4C95205DCFB40045B2AF /* FacebookUser.swift in Sources */,
+				C8626877206D778D00628A33 /* ConnectionToServer.swift in Sources */,
 				C8ED4C9C205DCFB40045B2AF /* FacebookAPIManager.swift in Sources */,
 				F50198EA2069A9BD006E2D38 /* RegisterViewController.swift in Sources */,
 				C8ED4C9D205DCFB40045B2AF /* NetworkingManager.swift in Sources */,
+				C8626872206D664900628A33 /* ProjectDetailsViewController.swift in Sources */,
 				C8ED4C9B205DCFB40045B2AF /* LoginViewController.swift in Sources */,
 				C8ED4C9A205DCFB40045B2AF /* FacebookLoginButton.swift in Sources */,
 			);
