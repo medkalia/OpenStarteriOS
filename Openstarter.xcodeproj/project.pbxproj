@@ -12,6 +12,7 @@
 		C8626872206D664900628A33 /* ProjectDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8626871206D664900628A33 /* ProjectDetailsViewController.swift */; };
 		C8626874206D719900628A33 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8626873206D719900628A33 /* CardView.swift */; };
 		C8626877206D778D00628A33 /* ConnectionToServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8626876206D778D00628A33 /* ConnectionToServer.swift */; };
+		C862687B206DA0E000628A33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C862687A206DA0DF00628A33 /* Assets.xcassets */; };
 		C8C515CC20656D2E003B9B74 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C515CB20656D2E003B9B74 /* MenuViewController.swift */; };
 		C8C515E620657B9A003B9B74 /* LeftMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C515E520657B9A003B9B74 /* LeftMenuViewController.swift */; };
 		C8EAD89A2060041B00A8FC01 /* DemoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8EAD8862060041B00A8FC01 /* DemoCell.swift */; };
@@ -28,7 +29,6 @@
 		C8ED4C19205DB7760045B2AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8ED4C18205DB7760045B2AF /* AppDelegate.swift */; };
 		C8ED4C1B205DB7760045B2AF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8ED4C1A205DB7760045B2AF /* ViewController.swift */; };
 		C8ED4C21205DB7760045B2AF /* Openstarter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C8ED4C1F205DB7760045B2AF /* Openstarter.xcdatamodeld */; };
-		C8ED4C23205DB7760045B2AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8ED4C22205DB7760045B2AF /* Assets.xcassets */; };
 		C8ED4C26205DB7760045B2AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8ED4C24205DB7760045B2AF /* LaunchScreen.storyboard */; };
 		C8ED4C94205DCFB40045B2AF /* FacebookPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8ED4C87205DCFB30045B2AF /* FacebookPost.swift */; };
 		C8ED4C95205DCFB40045B2AF /* FacebookUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8ED4C88205DCFB30045B2AF /* FacebookUser.swift */; };
@@ -74,6 +74,7 @@
 		C8626871206D664900628A33 /* ProjectDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailsViewController.swift; sourceTree = "<group>"; };
 		C8626873206D719900628A33 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		C8626876206D778D00628A33 /* ConnectionToServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionToServer.swift; sourceTree = "<group>"; };
+		C862687A206DA0DF00628A33 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C8C515CB20656D2E003B9B74 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		C8C515E520657B9A003B9B74 /* LeftMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftMenuViewController.swift; sourceTree = "<group>"; };
 		C8EAD8862060041B00A8FC01 /* DemoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoCell.swift; sourceTree = "<group>"; };
@@ -91,7 +92,6 @@
 		C8ED4C18205DB7760045B2AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C8ED4C1A205DB7760045B2AF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C8ED4C20205DB7760045B2AF /* Openstarter.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Openstarter.xcdatamodel; sourceTree = "<group>"; };
-		C8ED4C22205DB7760045B2AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C8ED4C25205DB7760045B2AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C8ED4C27205DB7760045B2AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C8ED4C2C205DB7760045B2AF /* OpenstarterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenstarterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -217,7 +217,7 @@
 				C8ED4C86205DCFB30045B2AF /* Models */,
 				C8ED4C8F205DCFB40045B2AF /* ViewControllers */,
 				C8ED4C18205DB7760045B2AF /* AppDelegate.swift */,
-				C8ED4C22205DB7760045B2AF /* Assets.xcassets */,
+				C862687A206DA0DF00628A33 /* Assets.xcassets */,
 				C8ED4C24205DB7760045B2AF /* LaunchScreen.storyboard */,
 				C8ED4C27205DB7760045B2AF /* Info.plist */,
 				C8ED4C1F205DB7760045B2AF /* Openstarter.xcdatamodeld */,
@@ -390,10 +390,10 @@
 				C8EAD8A32060041B00A8FC01 /* OpenSans-ExtraBold.ttf in Resources */,
 				C8EAD8A42060041B00A8FC01 /* OpenSans-LightItalic.ttf in Resources */,
 				C8ED4C26205DB7760045B2AF /* LaunchScreen.storyboard in Resources */,
-				C8ED4C23205DB7760045B2AF /* Assets.xcassets in Resources */,
 				C8EAD8A22060041B00A8FC01 /* OpenSans-Italic.ttf in Resources */,
 				C8EAD8A82060041B00A8FC01 /* OpenSans-Regular.ttf in Resources */,
 				C8EAD8A92060041B00A8FC01 /* OpenSans-BoldItalic.ttf in Resources */,
+				C862687B206DA0E000628A33 /* Assets.xcassets in Resources */,
 				C8ED4C96205DCFB40045B2AF /* Main.storyboard in Resources */,
 				C8EAD8A72060041B00A8FC01 /* OpenSans-ExtraBoldItalic.ttf in Resources */,
 				C8EAD8A02060041B00A8FC01 /* OpenSans-Semibold.ttf in Resources */,
@@ -787,7 +787,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 47YJM77Q8X;
 				INFOPLIST_FILE = Openstarter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tn.esprit.Openstarter;
@@ -805,7 +805,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 47YJM77Q8X;
 				INFOPLIST_FILE = Openstarter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tn.esprit.Openstarter;
