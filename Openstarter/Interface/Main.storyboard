@@ -43,13 +43,12 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rS5-aT-149" userLabel="LoginFormContainerView">
                                 <rect key="frame" x="36" y="153" width="304" height="134"/>
                                 <subviews>
-                                    <view alpha="0.40000000000000002" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yg2-PB-xG2" customClass="CardView" customModule="Openstarter" customModuleProvider="target">
+                                    <view alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yg2-PB-xG2" customClass="CardView" customModule="Openstarter" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="-76" width="304" height="332"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="0.080000000000000002" colorSpace="calibratedRGB"/>
                                     </view>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gtV-qs-nyA" userLabel="Username Text Field" customClass="LoginTextField" customModule="Openstarter" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="19.5" width="264" height="30"/>
+                                        <rect key="frame" x="20" y="20" width="264" height="30"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="oj2-Q0-RGU"/>
@@ -98,9 +97,12 @@
                                     <constraint firstAttribute="height" constant="133.5" id="Q5X-zm-VSN"/>
                                     <constraint firstItem="PeK-9E-LJ2" firstAttribute="centerX" secondItem="rS5-aT-149" secondAttribute="centerX" id="UL5-dI-KjY"/>
                                     <constraint firstItem="DKT-fJ-vfo" firstAttribute="top" secondItem="gtV-qs-nyA" secondAttribute="bottom" constant="7" id="ULl-oa-zZk"/>
+                                    <constraint firstAttribute="bottom" secondItem="yg2-PB-xG2" secondAttribute="bottom" constant="-122" id="cBD-ES-4wC"/>
                                     <constraint firstAttribute="trailing" secondItem="gtV-qs-nyA" secondAttribute="trailing" constant="20" id="lWY-nc-sTU"/>
+                                    <constraint firstItem="yg2-PB-xG2" firstAttribute="leading" secondItem="rS5-aT-149" secondAttribute="leading" id="mEZ-6C-rl8"/>
                                     <constraint firstAttribute="trailing" secondItem="DKT-fJ-vfo" secondAttribute="trailing" constant="20" id="qdW-Bc-7uY"/>
                                     <constraint firstItem="PeK-9E-LJ2" firstAttribute="top" secondItem="DKT-fJ-vfo" secondAttribute="bottom" constant="14" id="tgS-yu-raJ"/>
+                                    <constraint firstItem="yg2-PB-xG2" firstAttribute="top" secondItem="rS5-aT-149" secondAttribute="top" constant="-76" id="xk9-FL-g0O"/>
                                     <constraint firstItem="PeK-9E-LJ2" firstAttribute="width" secondItem="DKT-fJ-vfo" secondAttribute="width" id="zM9-oE-sHz"/>
                                 </constraints>
                             </view>
@@ -159,9 +161,11 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rVt-du-9ru">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rVt-du-9ru">
                                 <rect key="frame" x="128" y="588" width="121" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="121" id="Jve-qI-oow"/>
+                                </constraints>
                                 <state key="normal" title="Sign up">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -176,11 +180,14 @@
                             <constraint firstItem="KRp-P8-73M" firstAttribute="top" secondItem="fwU-xu-6Uy" secondAttribute="bottom" id="9Dl-wc-Tkm"/>
                             <constraint firstItem="KRp-P8-73M" firstAttribute="centerX" secondItem="4CQ-lm-TvN" secondAttribute="centerX" id="Bun-aQ-Grb"/>
                             <constraint firstItem="fwU-xu-6Uy" firstAttribute="centerX" secondItem="4CQ-lm-TvN" secondAttribute="centerX" id="DwO-ap-QdQ"/>
+                            <constraint firstItem="yg2-PB-xG2" firstAttribute="centerX" secondItem="4CQ-lm-TvN" secondAttribute="centerX" id="Eaz-Sb-3sz"/>
                             <constraint firstAttribute="trailingMargin" secondItem="rS5-aT-149" secondAttribute="trailing" constant="19" id="F5x-dY-hHQ"/>
                             <constraint firstItem="fwU-xu-6Uy" firstAttribute="top" secondItem="rS5-aT-149" secondAttribute="bottom" multiplier="1.05" id="S7r-BK-FwG"/>
                             <constraint firstItem="fwU-xu-6Uy" firstAttribute="width" secondItem="4CQ-lm-TvN" secondAttribute="width" id="Z5X-CH-d3T"/>
+                            <constraint firstItem="w1l-F5-zSo" firstAttribute="top" secondItem="rVt-du-9ru" secondAttribute="bottom" constant="49" id="dcw-jr-J7l"/>
                             <constraint firstItem="OIg-Zq-ngy" firstAttribute="top" secondItem="NSY-h8-A2N" secondAttribute="bottom" multiplier="4" constant="23" id="krr-JJ-AO7"/>
                             <constraint firstItem="OIg-Zq-ngy" firstAttribute="width" secondItem="4CQ-lm-TvN" secondAttribute="width" id="l31-3C-V63"/>
+                            <constraint firstItem="rVt-du-9ru" firstAttribute="centerX" secondItem="4CQ-lm-TvN" secondAttribute="centerX" id="t9W-oe-SCt"/>
                             <constraint firstItem="rS5-aT-149" firstAttribute="top" secondItem="OIg-Zq-ngy" secondAttribute="bottom" multiplier="1.05" id="yfB-je-8qc"/>
                             <constraint firstItem="OIg-Zq-ngy" firstAttribute="centerX" secondItem="4CQ-lm-TvN" secondAttribute="centerX" id="zWr-Y2-SSG"/>
                         </constraints>
@@ -308,6 +315,16 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ffQ-mr-gre">
+                                <rect key="frame" x="82" y="556" width="229" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Return">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="exit:" destination="wua-gM-Zdx" eventType="touchUpInside" id="eBV-D9-bAb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
