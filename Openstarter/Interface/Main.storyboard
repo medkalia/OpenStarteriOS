@@ -1,19 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Cje-xu-Gmy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Cje-xu-Gmy">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="AppleSDGothicNeo.ttc">
-            <string>AppleSDGothicNeo-Regular</string>
-        </array>
         <array key="OpenSans-Light.ttf">
             <string>OpenSans-Light</string>
         </array>
@@ -22,9 +19,6 @@
         </array>
         <array key="OpenSans-Semibold.ttf">
             <string>OpenSans-Semibold</string>
-        </array>
-        <array key="Savoye.ttc">
-            <string>SavoyeLetPlain</string>
         </array>
     </customFonts>
     <scenes>
@@ -1160,6 +1154,76 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jvL-mq-dzA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3674" y="535"/>
+        </scene>
+        <!--Demo-->
+        <scene sceneID="2TP-sT-8ZS">
+            <objects>
+                <viewController id="UKH-fv-rpD" customClass="UserProfileViewController" customModule="Openstarter" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WCC-zO-ZAI"/>
+                        <viewControllerLayoutGuide type="bottom" id="Xeg-Jg-1D9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lP3-7J-mea">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cover" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ot-oR-ibd">
+                                <rect key="frame" x="0.0" y="20" width="375" height="222.5"/>
+                                <color key="backgroundColor" red="0.30659490820000002" green="0.41462835669999998" blue="0.47096586229999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="60"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="userAvatar" translatesAutoresizingMaskIntoConstraints="NO" id="0TR-sy-i2t">
+                                <rect key="frame" x="24" y="197.5" width="90" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="c52-FD-gK4"/>
+                                    <constraint firstAttribute="height" constant="90" id="dL2-xi-p1x"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Vc-Ew-10D">
+                                <rect key="frame" x="122" y="197.5" width="237" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="cQC-LQ-lMW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="26"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oke-bU-gp0">
+                                <rect key="frame" x="162" y="257" width="51" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Update">
+                                    <color key="titleShadowColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gpg-jf-ryx">
+                                <rect key="frame" x="268" y="257" width="50" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Groups"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="0TR-sy-i2t" firstAttribute="bottom" secondItem="3Ot-oR-ibd" secondAttribute="bottom" constant="45" id="Z8V-us-VAT"/>
+                            <constraint firstAttribute="trailing" secondItem="9Vc-Ew-10D" secondAttribute="trailing" constant="16" id="bWN-pR-elQ"/>
+                            <constraint firstItem="3Ot-oR-ibd" firstAttribute="height" secondItem="lP3-7J-mea" secondAttribute="height" multiplier="1/3" id="dZd-4Q-VEb"/>
+                            <constraint firstAttribute="trailing" secondItem="3Ot-oR-ibd" secondAttribute="trailing" id="ej1-sk-cXJ"/>
+                            <constraint firstItem="3Ot-oR-ibd" firstAttribute="bottom" secondItem="9Vc-Ew-10D" secondAttribute="bottom" id="iBk-rf-Dpa"/>
+                            <constraint firstItem="3Ot-oR-ibd" firstAttribute="leading" secondItem="lP3-7J-mea" secondAttribute="leading" id="lwW-bS-as2"/>
+                            <constraint firstItem="9Vc-Ew-10D" firstAttribute="leading" secondItem="0TR-sy-i2t" secondAttribute="trailing" constant="8" id="rPn-rl-foE"/>
+                            <constraint firstItem="3Ot-oR-ibd" firstAttribute="top" secondItem="WCC-zO-ZAI" secondAttribute="bottom" id="uhU-U6-xPJ"/>
+                            <constraint firstItem="0TR-sy-i2t" firstAttribute="leading" secondItem="lP3-7J-mea" secondAttribute="leading" constant="24" id="xvo-Nd-tlV"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Demo" id="HRD-FQ-wVD"/>
+                    <connections>
+                        <outlet property="profileImage" destination="0TR-sy-i2t" id="Myd-Z0-aAv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WDz-1x-jfu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2860" y="-269"/>
         </scene>
     </scenes>
     <resources>
