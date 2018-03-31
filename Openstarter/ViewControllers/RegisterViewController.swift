@@ -9,10 +9,12 @@
 import UIKit
 
 class RegisterViewController: UIViewController {
+    
+    var colors: [UIColor] = [UIColor(hue: 0.5444, saturation: 0.8, brightness: 0.54, alpha: 1.0), UIColor(hue: 0.5667, saturation: 0.99, brightness: 0.72, alpha: 1.0),UIColor(hue: 0.5833, saturation: 0.25, brightness: 0.27, alpha: 1.0), UIColor(hue: 0.8583, saturation: 0.16, brightness: 0.5, alpha: 1.0)]
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.startAnimation(index: 0)
         // Do any additional setup after loading the view.
     }
 
@@ -23,6 +25,16 @@ class RegisterViewController: UIViewController {
     
     @IBAction func exit(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    func startAnimation(index: Int) {
+        UIView.animate(withDuration: 2.5, delay: 0, options: UIViewAnimationOptions.allowUserInteraction, animations: {
+            self.view.backgroundColor = self.colors[index]
+        }) { (finished) in
+            var currentIndex = index + 1
+            if currentIndex == self.colors.count { currentIndex = 0 }
+            self.startAnimation(index: currentIndex)
+        }
     }
     
     /*
