@@ -32,11 +32,15 @@ public class LeftMenuViewController: UIViewController, UITableViewDelegate, UITa
         tableView.deselectRow(at: indexPath, animated: true)
         switch indexPath.row {
         case 0:
-            self.sideMenuViewController!.setContentViewController(UINavigationController(rootViewController: self.storyboard!.instantiateViewController(withIdentifier: "firstViewController")), animated: true)
+            self.sideMenuViewController!.contentViewController = self.storyboard!.instantiateViewController(withIdentifier: "UserProfileViewControllerIdentifier")
+            
+            /*self.sideMenuViewController!.setContentViewController(self.storyboard!.instantiateViewController(withIdentifier: "UserProfileViewControllerIdentifier"), animated: true)*/
+            
+            /*self.sideMenuViewController!.setContentViewController(UINavigationController(rootViewController: self.storyboard!.instantiateViewController(withIdentifier: "UserProfileViewController")), animated: true)*/
             self.sideMenuViewController!.hideMenuViewController()
             
         case 1:
-            self.sideMenuViewController!.setContentViewController(UINavigationController(rootViewController: self.storyboard!.instantiateViewController(withIdentifier: "secondViewController")), animated: true)
+            self.sideMenuViewController!.setContentViewController(UINavigationController(rootViewController: self.storyboard!.instantiateViewController(withIdentifier: "UserProfileViewController")), animated: true)
             self.sideMenuViewController!.hideMenuViewController()
             
         default:
@@ -55,7 +59,7 @@ public class LeftMenuViewController: UIViewController, UITableViewDelegate, UITa
     }
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection sectionIndex: Int) -> Int {
-        return 5
+        return 3
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -72,8 +76,8 @@ public class LeftMenuViewController: UIViewController, UITableViewDelegate, UITa
             cell!.selectedBackgroundView = UIView()
         }
         
-        var titles = ["Home", "Calendar", "Profile", "Settings", "Log Out"]
-        var images = ["IconHome", "IconCalendar", "IconProfile", "IconSettings", "IconEmpty"]
+        var titles = ["Profile", "Settings", "Log Out"]
+        var images = ["IconProfile", "IconSettings", "IconEmpty"]
         cell!.textLabel?.text = titles[indexPath.row]
         cell!.imageView?.image = UIImage(named: images[indexPath.row])
         

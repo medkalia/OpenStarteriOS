@@ -42,7 +42,7 @@
 		C8ED4C9B205DCFB40045B2AF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8ED4C90205DCFB40045B2AF /* LoginViewController.swift */; };
 		C8ED4C9C205DCFB40045B2AF /* FacebookAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8ED4C92205DCFB40045B2AF /* FacebookAPIManager.swift */; };
 		C8ED4C9D205DCFB40045B2AF /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8ED4C93205DCFB40045B2AF /* NetworkingManager.swift */; };
-		C8F412F52066EC70007A5C38 /* ContentMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F412F42066EC70007A5C38 /* ContentMenuViewController.swift */; };
+		C8F412F52066EC70007A5C38 /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F412F42066EC70007A5C38 /* ContentViewController.swift */; };
 		EDF37CF0FFD9FC605E76FBDD /* Pods_OpenstarterTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BF6AF46334E984866BB4751 /* Pods_OpenstarterTests.framework */; };
 		F50198EA2069A9BD006E2D38 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50198E92069A9BD006E2D38 /* RegisterViewController.swift */; };
 /* End PBXBuildFile section */
@@ -110,7 +110,7 @@
 		C8ED4C90205DCFB40045B2AF /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C8ED4C92205DCFB40045B2AF /* FacebookAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookAPIManager.swift; sourceTree = "<group>"; };
 		C8ED4C93205DCFB40045B2AF /* NetworkingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
-		C8F412F42066EC70007A5C38 /* ContentMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentMenuViewController.swift; sourceTree = "<group>"; };
+		C8F412F42066EC70007A5C38 /* ContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
 		DD185EAE0A18E4ED6970C7C1 /* Pods-Openstarter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Openstarter.release.xcconfig"; path = "Pods/Target Support Files/Pods-Openstarter/Pods-Openstarter.release.xcconfig"; sourceTree = "<group>"; };
 		F50198E92069A9BD006E2D38 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -257,7 +257,7 @@
 				C8C515E520657B9A003B9B74 /* LeftMenuViewController.swift */,
 				C8C515CB20656D2E003B9B74 /* MenuViewController.swift */,
 				C8ED4C1A205DB7760045B2AF /* ViewController.swift */,
-				C8F412F42066EC70007A5C38 /* ContentMenuViewController.swift */,
+				C8F412F42066EC70007A5C38 /* ContentViewController.swift */,
 				C8EAD8862060041B00A8FC01 /* DemoCell.swift */,
 				C8ED4C90205DCFB40045B2AF /* LoginViewController.swift */,
 				F50198E92069A9BD006E2D38 /* RegisterViewController.swift */,
@@ -616,7 +616,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C8ED4C1B205DB7760045B2AF /* ViewController.swift in Sources */,
-				C8F412F52066EC70007A5C38 /* ContentMenuViewController.swift in Sources */,
+				C8F412F52066EC70007A5C38 /* ContentViewController.swift in Sources */,
 				C862687F206DA6BC00628A33 /* CompleteRegisterViewController.swift in Sources */,
 				C8ED4C99205DCFB40045B2AF /* LoginTextField.swift in Sources */,
 				C8ED4C97205DCFB40045B2AF /* LoginButton.swift in Sources */,
