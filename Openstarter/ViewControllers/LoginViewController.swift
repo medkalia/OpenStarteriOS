@@ -61,9 +61,9 @@ class LoginViewController: UIViewController {
         loginManager.logIn(readPermissions: readPermissions, viewController: self, completion: didReceiveFacebookLoginResult)
     }
 
-    @IBAction func didTapTwitterLoginButton(_ sender: TwitterLoginButton) {
+    @IBAction func didTapGoogleLoginButton(_ sender: GoogleLoginButton) {
         // Twitter login attempt
-        TWTRTwitter.sharedInstance().logIn(completion: { session, error in
+        /*TWTRTwitter.sharedInstance().logIn(completion: { session, error in
             if let session = session {
                 // Successful log in with Twitter
                 print("signed in as \(session.userName)");
@@ -72,7 +72,7 @@ class LoginViewController: UIViewController {
             } else {
                 print("error: \(error?.localizedDescription)");
             }
-        })
+        })*/
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

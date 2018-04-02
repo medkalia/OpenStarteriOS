@@ -36,7 +36,7 @@
 		C8ED4C95205DCFB40045B2AF /* FacebookUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8ED4C88205DCFB30045B2AF /* FacebookUser.swift */; };
 		C8ED4C96205DCFB40045B2AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8ED4C8A205DCFB30045B2AF /* Main.storyboard */; };
 		C8ED4C97205DCFB40045B2AF /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8ED4C8B205DCFB30045B2AF /* LoginButton.swift */; };
-		C8ED4C98205DCFB40045B2AF /* TwitterLoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8ED4C8C205DCFB30045B2AF /* TwitterLoginButton.swift */; };
+		C8ED4C98205DCFB40045B2AF /* GoogleLoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8ED4C8C205DCFB30045B2AF /* GoogleLoginButton.swift */; };
 		C8ED4C99205DCFB40045B2AF /* LoginTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8ED4C8D205DCFB30045B2AF /* LoginTextField.swift */; };
 		C8ED4C9A205DCFB40045B2AF /* FacebookLoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8ED4C8E205DCFB30045B2AF /* FacebookLoginButton.swift */; };
 		C8ED4C9B205DCFB40045B2AF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8ED4C90205DCFB40045B2AF /* LoginViewController.swift */; };
@@ -104,7 +104,7 @@
 		C8ED4C88205DCFB30045B2AF /* FacebookUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookUser.swift; sourceTree = "<group>"; };
 		C8ED4C8A205DCFB30045B2AF /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		C8ED4C8B205DCFB30045B2AF /* LoginButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginButton.swift; sourceTree = "<group>"; };
-		C8ED4C8C205DCFB30045B2AF /* TwitterLoginButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterLoginButton.swift; sourceTree = "<group>"; };
+		C8ED4C8C205DCFB30045B2AF /* GoogleLoginButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleLoginButton.swift; sourceTree = "<group>"; };
 		C8ED4C8D205DCFB30045B2AF /* LoginTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginTextField.swift; sourceTree = "<group>"; };
 		C8ED4C8E205DCFB30045B2AF /* FacebookLoginButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookLoginButton.swift; sourceTree = "<group>"; };
 		C8ED4C90205DCFB40045B2AF /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -243,7 +243,7 @@
 			children = (
 				C8ED4C8A205DCFB30045B2AF /* Main.storyboard */,
 				C8ED4C8B205DCFB30045B2AF /* LoginButton.swift */,
-				C8ED4C8C205DCFB30045B2AF /* TwitterLoginButton.swift */,
+				C8ED4C8C205DCFB30045B2AF /* GoogleLoginButton.swift */,
 				C8ED4C8D205DCFB30045B2AF /* LoginTextField.swift */,
 				C8ED4C8E205DCFB30045B2AF /* FacebookLoginButton.swift */,
 				C8626873206D719900628A33 /* CardView.swift */,
@@ -627,7 +627,7 @@
 				C8C515E620657B9A003B9B74 /* LeftMenuViewController.swift in Sources */,
 				C8ED4C19205DB7760045B2AF /* AppDelegate.swift in Sources */,
 				C8ED4C21205DB7760045B2AF /* Openstarter.xcdatamodeld in Sources */,
-				C8ED4C98205DCFB40045B2AF /* TwitterLoginButton.swift in Sources */,
+				C8ED4C98205DCFB40045B2AF /* GoogleLoginButton.swift in Sources */,
 				C8ED4C95205DCFB40045B2AF /* FacebookUser.swift in Sources */,
 				C8626877206D778D00628A33 /* ConnectionToServer.swift in Sources */,
 				C8ED4C9C205DCFB40045B2AF /* FacebookAPIManager.swift in Sources */,

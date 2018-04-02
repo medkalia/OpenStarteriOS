@@ -12,7 +12,7 @@ let kTwitterLoginButtonBackgroundColor = UIColor(displayP3Red: 85/255, green: 17
 let kTwitterLoginButtonTintColor = UIColor.white
 let kTwitterLoginButtonCornerRadius: CGFloat = 13.0
 
-class TwitterLoginButton: UIButton {
+class GoogleLoginButton: UIButton {
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -20,7 +20,7 @@ class TwitterLoginButton: UIButton {
     }
 
     private func configureUI() {
-        self.backgroundColor = kTwitterLoginButtonBackgroundColor
+        self.backgroundColor = UIColor.white
         self.layer.cornerRadius = kTwitterLoginButtonCornerRadius
         self.tintColor = kTwitterLoginButtonTintColor
         self.titleLabel?.font = UIFont(name: "AppleSDGothicNeo-Regular", size: 12)

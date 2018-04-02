@@ -30,17 +30,33 @@ public class LeftMenuViewController: UIViewController, UITableViewDelegate, UITa
     
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        
+        //let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        //let controller = storyboard.instantiateViewController(withIdentifier: "UserProfileViewControllerIdentifier")
+        
         switch indexPath.row {
         case 0:
-            self.sideMenuViewController!.contentViewController = self.storyboard!.instantiateViewController(withIdentifier: "UserProfileViewControllerIdentifier")
+            
+            //self.present(controller, animated: true, completion: nil)
+
+            //self.storyboard!.instantiateViewController(withIdentifier: "UserProfileViewControllerIdentifier").presentationController
             
             /*self.sideMenuViewController!.setContentViewController(self.storyboard!.instantiateViewController(withIdentifier: "UserProfileViewControllerIdentifier"), animated: true)*/
-            
-            /*self.sideMenuViewController!.setContentViewController(UINavigationController(rootViewController: self.storyboard!.instantiateViewController(withIdentifier: "UserProfileViewController")), animated: true)*/
+            let navToHome = UINavigationController(rootViewController: self.storyboard!.instantiateViewController(withIdentifier: "contentViewController"))
+            navToHome.navigationBar.isHidden = true
+            self.sideMenuViewController!.setContentViewController(navToHome, animated: true)
             self.sideMenuViewController!.hideMenuViewController()
             
         case 1:
-            self.sideMenuViewController!.setContentViewController(UINavigationController(rootViewController: self.storyboard!.instantiateViewController(withIdentifier: "UserProfileViewController")), animated: true)
+            let navToUserProfile = UINavigationController(rootViewController: self.storyboard!.instantiateViewController(withIdentifier: "UserProfileViewControllerIdentifier"))
+            navToUserProfile.navigationBar.isHidden = true
+            self.sideMenuViewController!.setContentViewController(navToUserProfile, animated: true)
+            self.sideMenuViewController!.hideMenuViewController()
+            
+        case 2:
+            let navToGroupProfile = UINavigationController(rootViewController: self.storyboard!.instantiateViewController(withIdentifier: "GroupProfileViewControllerIdentifier"))
+            navToGroupProfile.navigationBar.isHidden = true
+            self.sideMenuViewController!.setContentViewController(navToGroupProfile, animated: true)
             self.sideMenuViewController!.hideMenuViewController()
             
         default:
@@ -59,7 +75,7 @@ public class LeftMenuViewController: UIViewController, UITableViewDelegate, UITa
     }
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection sectionIndex: Int) -> Int {
-        return 3
+        return 4
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -76,8 +92,8 @@ public class LeftMenuViewController: UIViewController, UITableViewDelegate, UITa
             cell!.selectedBackgroundView = UIView()
         }
         
-        var titles = ["Profile", "Settings", "Log Out"]
-        var images = ["IconProfile", "IconSettings", "IconEmpty"]
+        var titles = ["Home", "Profile", "Settings", "Log Out"]
+        var images = ["IconHome", "IconProfile", "IconSettings", "IconEmpty"]
         cell!.textLabel?.text = titles[indexPath.row]
         cell!.imageView?.image = UIImage(named: images[indexPath.row])
         
