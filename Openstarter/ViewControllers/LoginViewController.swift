@@ -11,6 +11,7 @@ import FacebookLogin
 import TwitterKit
 import UIKit
 import Alamofire
+import SwiftyJSON
 
 class LoginViewController: UIViewController {
 
@@ -52,7 +53,12 @@ class LoginViewController: UIViewController {
             // It should never get here
             return
         }
-        didLogin(method: "email and password", info: "Email: \(email) \n Password: \(pass)")
+        
+        let parameters: [String: Any] = [
+            "email" : usernameTextField.text as Any,
+            "password" : passwordTextField.text as Any
+        ]
+        didLogin(method: "email and password", info: parameters)
     }
 
     @IBAction func didTapFacebookLoginButton(_ sender: FacebookLoginButton) {
@@ -83,26 +89,31 @@ class LoginViewController: UIViewController {
     private func didReceiveFacebookLoginResult(loginResult: LoginResult) {
         switch loginResult {
         case .success:
-            didLoginWithFacebook()
+            //didLoginWithFacebook()
+            print("fb")
         case .failed(_): break
         default: break
         }
     }
 
-    private func didLoginWithFacebook() {
+    /*private func didLoginWithFacebook() {
         // Successful log in with Facebook
         if let accessToken = AccessToken.current {
             let facebookAPIManager = FacebookAPIManager(accessToken: accessToken)
             facebookAPIManager.requestFacebookUser(completion: { (facebookUser) in
                 if let _ = facebookUser.email {
-                    let info = "First name: \(facebookUser.firstName!) \n Last name: \(facebookUser.lastName!) \n Email: \(facebookUser.email!)"
-                    self.didLogin(method: "Facebook", info: info)
+                    //let info = "First name: \(facebookUser.firstName!) \n Last name: \(facebookUser.lastName!) \n Email: \(facebookUser.email!)"
+                    let parameters: [String: Any] = [
+                        "email" : usernameTextField.text as Any,
+                        "password" : passwordTextField.text as Any
+                    ]
+                    self.didLogin(method: "Facebook", info: parameters)
                 }
             })
         }
-    }
+    }*/
 
-    private func didLogin(method: String, info: String) {
+    private func didLogin(method: String, info: [String: Any]) {
         /*let message = "Successfully logged in with \(method). " + info
         let alert = UIAlertController(title: "Success", message: message, preferredStyle: UIAlertControllerStyle.alert)
         alert.addAction(UIAlertAction(title: "Done", style: UIAlertActionStyle.default, handler: nil))
@@ -113,7 +124,49 @@ class LoginViewController: UIViewController {
         //self.present(MainVC, animated: true, completion: nil)
         
         
-        fetchProjects(url: cs.url+"/project/getAll")
+        /*Alamofire.request(cs.url+"/project/getAll", method: .get).validate().responseJSON { response in
+            switch response.result {
+            case .success(let value):
+                let json = JSON(value)
+                print("JSON: \(json)")
+            case .failure(let error):
+                print(error)
+            }
+        }*/
+        
+        //let jsonLogin = JSON()
+        
+        
+        
+        Alamofire.request(cs.url+"/user/login", method: .post, parameters: info, encoding: JSONEncoding.default).validate().responseJSON { response in
+            switch response.result {
+            case .success(let value):
+                let json = JSON(value)
+                if json["loggedIn"] == "true" {
+                    print("logged in")
+                    self.performSegue(withIdentifier: "toMenu", sender: nil)
+                } else if json["loggedIn"] == "false" {
+                    print("not loggedin")
+                    let message = "wrong password "
+                    let alert = UIAlertController(title: "Wrong", message: message, preferredStyle: UIAlertControllerStyle.alert)
+                    alert.addAction(UIAlertAction(title: "Done", style: UIAlertActionStyle.default, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
+                }
+                print("JSON: \(json)")
+                let message = "wrong email "
+                let alert2 = UIAlertController(title: "Wrong", message: message, preferredStyle: UIAlertControllerStyle.alert)
+                alert2.addAction(UIAlertAction(title: "Done", style: UIAlertActionStyle.default, handler: nil))
+                self.present(alert2, animated: true, completion: nil)
+            case .failure(let error):
+                print(error)
+                let message = "cannot reach server "
+                let alert2 = UIAlertController(title: "error", message: message, preferredStyle: UIAlertControllerStyle.alert)
+                alert2.addAction(UIAlertAction(title: "Done", style: UIAlertActionStyle.default, handler: nil))
+                self.present(alert2, animated: true, completion: nil)
+            }
+        }
+        
+        //fetchProjects(url: cs.url+"/user/getAll")
     }
     
     

@@ -1,26 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Cje-xu-Gmy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Cje-xu-Gmy">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="AppleSDGothicNeo.ttc">
-            <string>AppleSDGothicNeo-Regular</string>
-        </array>
-        <array key="AvenirNext.ttc">
-            <string>AvenirNext-UltraLight</string>
-        </array>
-        <array key="AvenirNextCondensed.ttc">
-            <string>AvenirNextCondensed-Regular</string>
-        </array>
         <array key="OpenSans-Light.ttf">
             <string>OpenSans-Light</string>
         </array>
@@ -29,9 +20,6 @@
         </array>
         <array key="OpenSans-Semibold.ttf">
             <string>OpenSans-Semibold</string>
-        </array>
-        <array key="Savoye.ttc">
-            <string>SavoyeLetPlain</string>
         </array>
     </customFonts>
     <scenes>
@@ -93,7 +81,6 @@
                                         <state key="normal" title="Login"/>
                                         <connections>
                                             <action selector="didTapLoginButton:" destination="Cje-xu-Gmy" eventType="touchUpInside" id="NJ0-Rg-Hnt"/>
-                                            <segue destination="XoJ-ZW-ofN" kind="showDetail" id="qYV-9P-Wpg"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -200,11 +187,12 @@
                     <connections>
                         <outlet property="passwordTextField" destination="DKT-fJ-vfo" id="ezW-De-G8L"/>
                         <outlet property="usernameTextField" destination="gtV-qs-nyA" id="EKB-iH-eFK"/>
+                        <segue destination="XoJ-ZW-ofN" kind="showDetail" identifier="toMenu" id="les-mM-t6K"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DCI-rr-jRU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1232.8" y="-270.31484257871068"/>
+            <point key="canvasLocation" x="1188" y="-269"/>
         </scene>
         <!--Menu-->
         <scene sceneID="W2H-vB-7hh">
