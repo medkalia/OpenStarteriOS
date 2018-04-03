@@ -10,6 +10,6 @@ import Foundation
 
 public class ConnectionToServer {
     
-    var url = "http://mohamedkalia.alwaysdata.net/AndroidWS/web/app.php"
+    var url = "http://mohamedkalia.alwaysdata.net/AndroidWS/web"
     //var url = "http://localhost/AndroidWS/web/app.php"
 }
