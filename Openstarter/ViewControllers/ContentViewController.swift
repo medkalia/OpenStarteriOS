@@ -8,16 +8,37 @@
 
 import FoldingCell
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 class ContentMenuViewController: UITableViewController {
     let kCloseCellHeight: CGFloat = 179
     let kOpenCellHeight: CGFloat = 488
     let kRowsCount = 10
     var cellHeights: [CGFloat] = []
+    let cs = ConnectionToServer()
+    var json = JSON()
+    var count :Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
+        let url = cs.url+"/project/getAll"
+        Alamofire.request(url, method: .get).validate().responseJSON { response in
+            switch response.result {
+            case .success(let value):
+                self.json = JSON(value)
+                //print("JSON: \(self.self.json)")
+                print("aaaaaaa "+self.json[0]["name"].stringValue)
+                self.count = self.json.count
+                print("mammmm "+String(self.count))
+                
+                
+            case .failure(let error):
+                print(error)
+            }
+        }
+        print("tab"+String(json.count))
     }
     
     private func setup() {
