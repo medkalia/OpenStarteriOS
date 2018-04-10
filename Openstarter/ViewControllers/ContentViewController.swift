@@ -17,30 +17,32 @@ class ContentMenuViewController: UITableViewController {
     let kRowsCount = 10
     var cellHeights: [CGFloat] = []
     let cs = ConnectionToServer()
-    var json = JSON()
-    var count :Int = 0
+   // var json = JSON()
+    //var count :Int = 0
+    var projectArray:NSArray = []
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
-        let url = cs.url+"/project/getAll"
-        Alamofire.request(url, method: .get).validate().responseJSON { response in
-            switch response.result {
-            case .success(let value):
-                self.json = JSON(value)
-                //print("JSON: \(self.self.json)")
-                print("aaaaaaa "+self.json[0]["name"].stringValue)
-                self.count = self.json.count
-                print("mammmm "+String(self.count))
-                
-                
+       fetchProjects(url:cs.url+"/project/getAll")
+       
+    }
+    func fetchProjects(url:String){
+        Alamofire.request(url).validate().responseJSON(completionHandler:{response in
+            switch response.result{
+            case .success:
+                print("validation succesful")
+                print(response.result.value!)
+                self.projectArray = response.result.value! as! NSArray
+                self.tableView.reloadData()
             case .failure(let error):
                 print(error)
             }
-        }
-        print("tab"+String(json.count))
+            
+        } )
+        
     }
-    
     private func setup() {
         cellHeights = Array(repeating: kCloseCellHeight, count: kRowsCount)
         tableView.estimatedRowHeight = kCloseCellHeight
@@ -55,7 +57,7 @@ extension ContentMenuViewController {
     
     
     override func tableView(_: UITableView, numberOfRowsInSection _: Int) -> Int {
-        return 10
+        return projectArray.count
     }
     
     override func tableView(_: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
@@ -79,6 +81,9 @@ extension ContentMenuViewController {
         let durations: [TimeInterval] = [0.26, 0.2, 0.2]
         cell.durationsForExpandedState = durations
         cell.durationsForCollapsedState = durations
+        let nameLbl = cell.viewWithTag(10) as? UILabel
+        let projects = projectArray[indexPath.row] as! Dictionary<String,Any>
+        nameLbl?.text = projects["name"] as? String
         return cell
     }
     
