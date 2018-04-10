@@ -46,6 +46,8 @@
 		EDF37CF0FFD9FC605E76FBDD /* Pods_OpenstarterTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BF6AF46334E984866BB4751 /* Pods_OpenstarterTests.framework */; };
 		F50198EA2069A9BD006E2D38 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50198E92069A9BD006E2D38 /* RegisterViewController.swift */; };
 		F51C7794207CDEFC005B6030 /* UpLoadImagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51C7793207CDEFC005B6030 /* UpLoadImagesViewController.swift */; };
+		F526BA3F207CF8D9003F5C0B /* PhotoViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F526BA3D207CF8D9003F5C0B /* PhotoViewCell.swift */; };
+		F526BA40207CF8D9003F5C0B /* PhotoViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F526BA3E207CF8D9003F5C0B /* PhotoViewCell.xib */; };
 		F5D0E3802072FA870081F784 /* AddProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D0E37F2072FA870081F784 /* AddProjectViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -116,6 +118,8 @@
 		DD185EAE0A18E4ED6970C7C1 /* Pods-Openstarter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Openstarter.release.xcconfig"; path = "Pods/Target Support Files/Pods-Openstarter/Pods-Openstarter.release.xcconfig"; sourceTree = "<group>"; };
 		F50198E92069A9BD006E2D38 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		F51C7793207CDEFC005B6030 /* UpLoadImagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpLoadImagesViewController.swift; sourceTree = "<group>"; };
+		F526BA3D207CF8D9003F5C0B /* PhotoViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewCell.swift; sourceTree = "<group>"; };
+		F526BA3E207CF8D9003F5C0B /* PhotoViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoViewCell.xib; sourceTree = "<group>"; };
 		F5D0E37F2072FA870081F784 /* AddProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProjectViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -270,6 +274,8 @@
 				C862687C206DA31000628A33 /* UserProfileViewController.swift */,
 				F5D0E37F2072FA870081F784 /* AddProjectViewController.swift */,
 				F51C7793207CDEFC005B6030 /* UpLoadImagesViewController.swift */,
+				F526BA3D207CF8D9003F5C0B /* PhotoViewCell.swift */,
+				F526BA3E207CF8D9003F5C0B /* PhotoViewCell.xib */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -408,6 +414,7 @@
 				C862687B206DA0E000628A33 /* Assets.xcassets in Resources */,
 				C8ED4C96205DCFB40045B2AF /* Main.storyboard in Resources */,
 				C8EAD8A72060041B00A8FC01 /* OpenSans-ExtraBoldItalic.ttf in Resources */,
+				F526BA40207CF8D9003F5C0B /* PhotoViewCell.xib in Resources */,
 				C8EAD8A02060041B00A8FC01 /* OpenSans-Semibold.ttf in Resources */,
 				C8EAD8A12060041B00A8FC01 /* OpenSans-Light.ttf in Resources */,
 				C8EAD8A62060041B00A8FC01 /* OpenSans-SemiboldItalic.ttf in Resources */,
@@ -645,6 +652,7 @@
 				C8626872206D664900628A33 /* ProjectDetailsViewController.swift in Sources */,
 				C8ED4C9B205DCFB40045B2AF /* LoginViewController.swift in Sources */,
 				C8ED4C9A205DCFB40045B2AF /* FacebookLoginButton.swift in Sources */,
+				F526BA3F207CF8D9003F5C0B /* PhotoViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

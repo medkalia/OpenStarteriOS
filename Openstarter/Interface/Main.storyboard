@@ -1524,7 +1524,7 @@
                                                         <rect key="frame" x="146" y="659" width="22" height="22"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <connections>
-                                                            <segue destination="j9j-kO-9OE" kind="show" id="Yxi-cF-VYj"/>
+                                                            <segue destination="71f-HU-vu6" kind="show" id="LhS-pV-hc2"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -1565,7 +1565,7 @@
             </objects>
             <point key="canvasLocation" x="3845.5999999999999" y="-1601.1994002998501"/>
         </scene>
-        <!--Up Load Images View Controller-->
+        <!--add images-->
         <scene sceneID="esV-sa-z14">
             <objects>
                 <viewController id="j9j-kO-9OE" customClass="UpLoadImagesViewController" customModule="Openstarter" customModuleProvider="target" sceneMemberID="viewController">
@@ -1573,14 +1573,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DP1-m4-dEa">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
-                                <items>
-                                    <navigationItem title="Title" id="EUp-BQ-z1H"/>
-                                </items>
-                            </navigationBar>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="5LN-nH-gIy">
-                                <rect key="frame" x="0.0" y="667" width="375" height="0.0"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="5LN-nH-gIy">
+                                <rect key="frame" x="0.0" y="74" width="375" height="593"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="rkO-e8-fXV">
                                     <size key="itemSize" width="50" height="50"/>
@@ -1592,22 +1587,32 @@
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="qcA-OF-vty" firstAttribute="bottom" secondItem="DP1-m4-dEa" secondAttribute="bottom" id="22h-t4-BaB"/>
-                            <constraint firstItem="DP1-m4-dEa" firstAttribute="leading" secondItem="qcA-OF-vty" secondAttribute="leading" id="3FF-0g-ApE"/>
-                            <constraint firstItem="5LN-nH-gIy" firstAttribute="bottom" secondItem="qcA-OF-vty" secondAttribute="bottom" id="CnH-2K-eUr"/>
-                            <constraint firstItem="5LN-nH-gIy" firstAttribute="trailing" secondItem="qcA-OF-vty" secondAttribute="trailing" id="HU9-nK-Q9q"/>
-                            <constraint firstItem="5LN-nH-gIy" firstAttribute="top" secondItem="DP1-m4-dEa" secondAttribute="bottom" id="ICY-ow-HsO"/>
-                            <constraint firstItem="DP1-m4-dEa" firstAttribute="top" secondItem="qcA-OF-vty" secondAttribute="top" id="aa1-Ah-VPJ"/>
-                            <constraint firstItem="5LN-nH-gIy" firstAttribute="leading" secondItem="qcA-OF-vty" secondAttribute="leading" id="jrO-Zo-8qj"/>
-                            <constraint firstItem="DP1-m4-dEa" firstAttribute="trailing" secondItem="qcA-OF-vty" secondAttribute="trailing" id="s3Z-s7-3Pj"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="qcA-OF-vty"/>
                     </view>
+                    <navigationItem key="navigationItem" title="add images" id="yw2-Oi-TPD"/>
+                    <connections>
+                        <outlet property="collectionView" destination="5LN-nH-gIy" id="dOM-Ce-Bul"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gHA-cs-HcG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4666.3999999999996" y="-1744.6776611694154"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="9lD-zP-O6Z">
+            <objects>
+                <navigationController id="71f-HU-vu6" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3qR-Ey-T8w">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="j9j-kO-9OE" kind="relationship" relationship="rootViewController" id="mG2-Js-4kd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x8v-XM-twt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4369" y="-763"/>
         </scene>
     </scenes>
     <resources>

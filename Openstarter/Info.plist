@@ -50,6 +50,10 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>allow the application to log into your gallery</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>allow the application to log into your gallery</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
