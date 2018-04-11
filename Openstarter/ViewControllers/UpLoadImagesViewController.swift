@@ -31,7 +31,9 @@ class UpLoadImagesViewController: UIViewController {
     }
     var pickerImage: UIImage? {
         didSet{
-            //kkkkkkk
+            guard let image1 = pickerImage else {return}
+            self.images.append(image1)
+            self.collectionView.reloadData()
         }
     }
     
@@ -40,7 +42,7 @@ class UpLoadImagesViewController: UIViewController {
         picker.allowsEditing = true
         picker.sourceType = .photoLibrary
         picker.delegate = self
-        //picker.present(picker, animated: false, completion: nil)
+        self.present(picker, animated: false, completion: nil)
        
         
     }
