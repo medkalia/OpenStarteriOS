@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import DateTimePicker
 
 class CompleteRegisterViewController: UIViewController {
     
@@ -15,9 +16,20 @@ class CompleteRegisterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.startAnimation(index: 0)
+        
+        
         // Do any additional setup after loading the view.
     }
 
+    @IBAction func openPicker(_ sender: Any) {
+        let picker = DateTimePicker.show()
+        picker.highlightColor = UIColor(red: 255.0/255.0, green: 138.0/255.0, blue: 138.0/255.0, alpha: 1)
+        picker.isDatePickerOnly = true // to hide time and show only date picker
+        picker.completionHandler = { date in
+            // do something after tapping done
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

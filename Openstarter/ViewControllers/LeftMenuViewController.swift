@@ -54,10 +54,23 @@ public class LeftMenuViewController: UIViewController, UITableViewDelegate, UITa
             self.sideMenuViewController!.hideMenuViewController()
             
         case 2:
+            let navToGroupProfile = UINavigationController(rootViewController: self.storyboard!.instantiateViewController(withIdentifier: "AddProjectViewControllerIdentifier"))
+            navToGroupProfile.navigationBar.isHidden = true
+            self.sideMenuViewController!.setContentViewController(navToGroupProfile, animated: true)
+            self.sideMenuViewController!.hideMenuViewController()
+            
+        case 3:
+            let navToGroupProfile = UINavigationController(rootViewController: self.storyboard!.instantiateViewController(withIdentifier: "FavoriteProjectsViewControllerIdentifier"))
+            navToGroupProfile.navigationBar.isHidden = true
+            self.sideMenuViewController!.setContentViewController(navToGroupProfile, animated: true)
+            self.sideMenuViewController!.hideMenuViewController()
+            
+        case 4:
             let navToGroupProfile = UINavigationController(rootViewController: self.storyboard!.instantiateViewController(withIdentifier: "GroupProfileViewControllerIdentifier"))
             navToGroupProfile.navigationBar.isHidden = true
             self.sideMenuViewController!.setContentViewController(navToGroupProfile, animated: true)
             self.sideMenuViewController!.hideMenuViewController()
+            
             
         default:
             break
@@ -75,7 +88,7 @@ public class LeftMenuViewController: UIViewController, UITableViewDelegate, UITa
     }
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection sectionIndex: Int) -> Int {
-        return 4
+        return 6
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -92,8 +105,8 @@ public class LeftMenuViewController: UIViewController, UITableViewDelegate, UITa
             cell!.selectedBackgroundView = UIView()
         }
         
-        var titles = ["Home", "Profile", "Settings", "Log Out"]
-        var images = ["IconHome", "IconProfile", "IconSettings", "IconEmpty"]
+        var titles = ["Home", "Profile", "New Project", "Favorites", "Settings", "Log Out"]
+        var images = ["IconHome", "IconProfile", "IconProfile", "IconProfile", "IconSettings", "IconEmpty"]
         cell!.textLabel?.text = titles[indexPath.row]
         cell!.imageView?.image = UIImage(named: images[indexPath.row])
         

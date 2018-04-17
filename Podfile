@@ -19,6 +19,7 @@ target 'Openstarter' do
     pod 'AKSideMenu'
     pod 'paper-onboarding'
     pod 'SwiftyJSON'
+    pod 'DateTimePicker'
 
   target 'OpenstarterTests' do
     inherit! :search_paths

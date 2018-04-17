@@ -171,7 +171,7 @@ class LoginViewController: UIViewController {
     
     
     
-    func fetchProjects(url:String){
+    /*func fetchProjects(url:String){
         Alamofire.request(url).validate().responseJSON(completionHandler:{response in
             switch response.result{
             case .success:
@@ -185,5 +185,5 @@ class LoginViewController: UIViewController {
             
         } )
         
-    }
+    }*/
 }
