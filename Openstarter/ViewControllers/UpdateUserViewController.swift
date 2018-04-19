@@ -1,8 +1,8 @@
 //
-//  CompleteRegisterViewController.swift
+//  UpdateUserViewController.swift
 //  Openstarter
 //
-//  Created by Mohamed Kalia on 3/29/18.
+//  Created by Mohamed Kalia on 4/18/18.
 //  Copyright © 2018 Mohamed Kalia. All rights reserved.
 //
 
@@ -11,29 +11,30 @@ import DateTimePicker
 import Alamofire
 import SwiftyJSON
 
-class CompleteRegisterViewController: UIViewController {
-    
+class UpdateUserViewController: UIViewController {
+
     let cs = ConnectionToServer()
     var colors: [UIColor] = [UIColor(hue: 0.5444, saturation: 0.8, brightness: 0.54, alpha: 1.0), UIColor(hue: 0.5667, saturation: 0.99, brightness: 0.72, alpha: 1.0),UIColor(hue: 0.5833, saturation: 0.25, brightness: 0.27, alpha: 1.0), UIColor(hue: 0.8583, saturation: 0.16, brightness: 0.5, alpha: 1.0)]
-
-    @IBOutlet weak var firstName: UITextField!
-    @IBOutlet weak var lastName: UITextField!
-    @IBOutlet weak var bio: UITextField!
-    @IBOutlet weak var birthdateLabel: UILabel!
     
     let email = UserDefaults.standard.string(forKey: "userEmail")
+    
+    @IBOutlet weak var birthdateLabel: UILabel!
+    @IBOutlet weak var firstname: UITextField!
+    @IBOutlet weak var lastname: UITextField!
+    @IBOutlet weak var bio: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.startAnimation(index: 0)
-        
-        
-        //UserDefaults.standard.removeObject(forKey: "Key")  to remove !!
-        
-        
+
         // Do any additional setup after loading the view.
     }
 
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
     @IBAction func openPicker(_ sender: Any) {
         let picker = DateTimePicker.show()
         picker.highlightColor = UIColor(red: 255.0/255.0, green: 138.0/255.0, blue: 138.0/255.0, alpha: 1)
@@ -51,9 +52,8 @@ class CompleteRegisterViewController: UIViewController {
         }
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func cancel(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
     
     func startAnimation(index: Int) {
@@ -66,38 +66,6 @@ class CompleteRegisterViewController: UIViewController {
         }
     }
     
-
-    @IBAction func submit(_ sender: Any) {
-        let parameters: [String: Any] = [
-            "email" : email as Any,
-            "firstname" : firstName.text as Any,
-            "lastname" : lastName.text as Any,
-            "birthdate" : "1994/10/10 00:00:00" as Any,
-            "bio" : bio.text as Any,
-            ]
-        
-        Alamofire.request(cs.url+"/user/update", method: .post, parameters: parameters, encoding: JSONEncoding.default).validate().responseJSON { response in
-            switch response.result {
-            case .success(let value):
-                let json = JSON(value)
-                if json["type"] == "success" {
-                    print("registred")
-                    self.performSegue(withIdentifier: "completeRegsiterToMenu", sender: nil)
-                }
-                print("JSON: \(json)")
-                let message = "something went wrong"
-                let alert2 = UIAlertController(title: "Wrong", message: message, preferredStyle: UIAlertControllerStyle.alert)
-                alert2.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
-                self.present(alert2, animated: true, completion: nil)
-            case .failure(let error):
-                print(error)
-                let message = "cannot reach server "
-                let alert2 = UIAlertController(title: "error", message: message, preferredStyle: UIAlertControllerStyle.alert)
-                alert2.addAction(UIAlertAction(title: "Done", style: UIAlertActionStyle.default, handler: nil))
-                self.present(alert2, animated: true, completion: nil)
-            }
-        }
-    }
     /*
     // MARK: - Navigation
 

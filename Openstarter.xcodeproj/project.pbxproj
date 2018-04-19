@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4C186086A6840EBA57BBD61B /* Pods_OpenstarterUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F10178F838181B844F42168 /* Pods_OpenstarterUITests.framework */; };
 		56054ADACDFBA308F0CFC0E3 /* Pods_Openstarter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F34A6828CA93A88FEB9B5E6 /* Pods_Openstarter.framework */; };
+		C829D4DD2087FB200057AE22 /* UpdateUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C829D4DC2087FB200057AE22 /* UpdateUserViewController.swift */; };
 		C847CBF5207FBB4D008069D6 /* FavoriteProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C847CBF4207FBB4D008069D6 /* FavoriteProjectsViewController.swift */; };
 		C8626872206D664900628A33 /* ProjectDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8626871206D664900628A33 /* ProjectDetailsViewController.swift */; };
 		C8626874206D719900628A33 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8626873206D719900628A33 /* CardView.swift */; };
@@ -78,6 +79,7 @@
 		871DE5FC5ACAC101BE4DE396 /* Pods-OpenstarterTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenstarterTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OpenstarterTests/Pods-OpenstarterTests.release.xcconfig"; sourceTree = "<group>"; };
 		8F34A6828CA93A88FEB9B5E6 /* Pods_Openstarter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Openstarter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		931ECA1D2F633EC31EC4346E /* Pods-Openstarter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Openstarter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Openstarter/Pods-Openstarter.debug.xcconfig"; sourceTree = "<group>"; };
+		C829D4DC2087FB200057AE22 /* UpdateUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateUserViewController.swift; sourceTree = "<group>"; };
 		C847CBF4207FBB4D008069D6 /* FavoriteProjectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteProjectsViewController.swift; sourceTree = "<group>"; };
 		C8626871206D664900628A33 /* ProjectDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailsViewController.swift; sourceTree = "<group>"; };
 		C8626873206D719900628A33 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
@@ -279,6 +281,7 @@
 				F526BA3D207CF8D9003F5C0B /* PhotoViewCell.swift */,
 				F526BA3E207CF8D9003F5C0B /* PhotoViewCell.xib */,
 				C847CBF4207FBB4D008069D6 /* FavoriteProjectsViewController.swift */,
+				C829D4DC2087FB200057AE22 /* UpdateUserViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -636,6 +639,7 @@
 				C8ED4C1B205DB7760045B2AF /* ViewController.swift in Sources */,
 				C8F412F52066EC70007A5C38 /* ContentViewController.swift in Sources */,
 				C862687F206DA6BC00628A33 /* CompleteRegisterViewController.swift in Sources */,
+				C829D4DD2087FB200057AE22 /* UpdateUserViewController.swift in Sources */,
 				C8ED4C99205DCFB40045B2AF /* LoginTextField.swift in Sources */,
 				C8ED4C97205DCFB40045B2AF /* LoginButton.swift in Sources */,
 				C8EAD89A2060041B00A8FC01 /* DemoCell.swift in Sources */,
