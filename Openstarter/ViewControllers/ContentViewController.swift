@@ -64,7 +64,7 @@ extension ContentMenuViewController {
         guard case let cell as DemoCell = cell else {
             return
         }
-        
+ 
         cell.backgroundColor = .clear
         
         if cellHeights[indexPath.row] == kCloseCellHeight {
@@ -73,7 +73,7 @@ extension ContentMenuViewController {
             cell.unfold(true, animated: false, completion: nil)
         }
         
-        cell.number = indexPath.row
+       // cell.number = indexPath.row
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -81,9 +81,37 @@ extension ContentMenuViewController {
         let durations: [TimeInterval] = [0.26, 0.2, 0.2]
         cell.durationsForExpandedState = durations
         cell.durationsForCollapsedState = durations
-        let nameLbl = cell.viewWithTag(10) as? UILabel
+        let nameLbl_out = cell.viewWithTag(10) as? UILabel
+        let descLbl_out = cell.viewWithTag(11) as? UILabel
+        let followsLbl_out = cell.viewWithTag(12) as? UILabel
+        let pledgesLbl_out = cell.viewWithTag(13) as? UILabel
+        let goalLbl_out = cell.viewWithTag(14) as? UILabel
+        let namelbl = cell.viewWithTag(15) as? UILabel
+        let pourcntagelbl = cell.viewWithTag(16) as? UILabel
+        let followslbl = cell.viewWithTag(17) as? UILabel
+        let pledgeslbl = cell.viewWithTag(18) as? UILabel
+        let goallbl = cell.viewWithTag(19) as? UILabel
+        let desclbl = cell.viewWithTag(20) as? UILabel
+        let fromlbl = cell.viewWithTag(21) as? UILabel
+        let tolbl = cell.viewWithTag(22) as? UILabel
+        let deadlinelbl = cell.viewWithTag(23) as? UILabel
         let projects = projectArray[indexPath.row] as! Dictionary<String,Any>
-        nameLbl?.text = projects["name"] as? String
+        nameLbl_out?.text = projects["name"] as? String
+        descLbl_out?.text =  projects["shortDescription"]  as? String
+        followsLbl_out?.text = projects["followCount"] as? String
+        let budget : Double = (projects["budget"]  as? Double)!
+        let Currentbudget : Double = (projects["currentBudget"]  as? Double)!
+        pledgesLbl_out?.text =  String(Currentbudget)+"$"
+        goalLbl_out?.text = String(budget)+"$"
+        namelbl?.text = projects["name"] as? String
+        pourcntagelbl?.text = "20%"
+        followslbl?.text = projects["followCount"] as? String
+        pledgeslbl?.text =  String(Currentbudget)+"$"
+        goallbl?.text = String(budget)+"$"
+        desclbl?.text =  projects["shortDescription"]  as? String
+        fromlbl?.text = projects["startDate"] as? String
+        tolbl?.text = projects["finishDate"] as? String
+        deadlinelbl?.text = "4days"
         return cell
     }
     
