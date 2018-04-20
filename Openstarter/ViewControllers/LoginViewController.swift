@@ -32,7 +32,8 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.startAnimation(index: 0)
-        
+        usernameTextField.text = "mohamed.kalia@esprit.tn"
+        passwordTextField.text = "1234"
         
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -144,6 +145,7 @@ class LoginViewController: UIViewController {
                 let json = JSON(value)
                 if json["loggedIn"] == "true" {
                     print("logged in")
+                    UserDefaults.standard.set(self.usernameTextField.text, forKey: "userEmail")
                     self.performSegue(withIdentifier: "toMenu", sender: nil)
                 } else if json["loggedIn"] == "false" {
                     print("not loggedin")
