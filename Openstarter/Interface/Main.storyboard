@@ -1278,7 +1278,7 @@
         <!--Group Profile-->
         <scene sceneID="ydm-nu-Naa">
             <objects>
-                <viewController storyboardIdentifier="GroupProfileViewControllerIdentifier" useStoryboardIdentifierAsRestorationIdentifier="YES" id="q6N-wW-Vf7" userLabel="Group Profile" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GroupProfileViewControllerIdentifier" useStoryboardIdentifierAsRestorationIdentifier="YES" id="q6N-wW-Vf7" userLabel="Group Profile" customClass="CollaborationGroupViewController" customModule="Openstarter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fgd-Xs-IsW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1326,7 +1326,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hhc-5T-Mg2">
-                                <rect key="frame" x="109" y="357" width="11" height="21"/>
+                                <rect key="frame" x="109" y="357" width="48" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -1340,7 +1340,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uoa-rW-f0m">
-                                <rect key="frame" x="249" y="358" width="11" height="21"/>
+                                <rect key="frame" x="249" y="358" width="54" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -1371,6 +1371,9 @@
                                 <rect key="frame" x="143" y="617" width="88" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="ADD GROUP"/>
+                                <connections>
+                                    <action selector="addGroup:" destination="q6N-wW-Vf7" eventType="touchUpInside" id="mbG-ct-sns"/>
+                                </connections>
                             </button>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J7t-tQ-aFM">
                                 <rect key="frame" x="43" y="515" width="288" height="98"/>
@@ -1392,10 +1395,16 @@
                         <viewLayoutGuide key="safeArea" id="Dki-o6-CMp"/>
                     </view>
                     <navigationItem key="navigationItem" title="Demo" id="iTR-ir-8ox"/>
+                    <connections>
+                        <outlet property="creationDate" destination="Mcj-NU-aI1" id="qmX-gK-jj7"/>
+                        <outlet property="groupList" destination="J7t-tQ-aFM" id="92j-Uv-hYM"/>
+                        <outlet property="members" destination="hhc-5T-Mg2" id="7JQ-vF-9X8"/>
+                        <outlet property="projects" destination="Uoa-rW-f0m" id="opP-tO-SdQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GyN-ky-Ufu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3618" y="-270"/>
+            <point key="canvasLocation" x="3616.8000000000002" y="-270.31484257871068"/>
         </scene>
         <!--Add Project-->
         <scene sceneID="Cqr-vV-HMJ">
@@ -2407,6 +2416,9 @@
                                 <state key="normal" title="Update">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="update:" destination="J14-F5-qpZ" eventType="touchUpInside" id="DpB-Lf-X5W"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -2438,6 +2450,6 @@
         <image name="userAvatar" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="PPA-Bg-3p1"/>
+        <segue reference="les-mM-t6K"/>
     </inferredMetricsTieBreakers>
 </document>
