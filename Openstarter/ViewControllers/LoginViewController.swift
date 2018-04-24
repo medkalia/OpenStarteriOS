@@ -8,7 +8,6 @@
 
 import FacebookCore
 import FacebookLogin
-import TwitterKit
 import UIKit
 import Alamofire
 import SwiftyJSON
@@ -26,7 +25,6 @@ class LoginViewController: UIViewController {
     
     var colors: [UIColor] = [UIColor(hue: 0.5444, saturation: 0.8, brightness: 0.54, alpha: 1.0), UIColor(hue: 0.5667, saturation: 0.99, brightness: 0.72, alpha: 1.0),UIColor(hue: 0.5833, saturation: 0.25, brightness: 0.27, alpha: 1.0), UIColor(hue: 0.8583, saturation: 0.16, brightness: 0.5, alpha: 1.0)]
     
-    
     private let readPermissions: [ReadPermission] = [ .publicProfile, .email, .userFriends, .custom("user_posts") ]
     
     override func viewDidLoad() {
@@ -34,6 +32,9 @@ class LoginViewController: UIViewController {
         self.startAnimation(index: 0)
         usernameTextField.text = "mohamed.kalia@esprit.tn"
         passwordTextField.text = "1234"
+        if UserDefaults.standard.bool(forKey: "loggedIn") == true {
+            self.performSegue(withIdentifier: "toMenu", sender: nil)
+        }
         
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -69,17 +70,7 @@ class LoginViewController: UIViewController {
     }
 
     @IBAction func didTapGoogleLoginButton(_ sender: GoogleLoginButton) {
-        // Twitter login attempt
-        /*TWTRTwitter.sharedInstance().logIn(completion: { session, error in
-            if let session = session {
-                // Successful log in with Twitter
-                print("signed in as \(session.userName)");
-                let info = "Username: \(session.userName) \n User ID: \(session.userID)"
-                self.didLogin(method: "Twitter", info: info)
-            } else {
-                print("error: \(error?.localizedDescription)");
-            }
-        })*/
+        
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -97,47 +88,7 @@ class LoginViewController: UIViewController {
         }
     }
 
-    /*private func didLoginWithFacebook() {
-        // Successful log in with Facebook
-        if let accessToken = AccessToken.current {
-            let facebookAPIManager = FacebookAPIManager(accessToken: accessToken)
-            facebookAPIManager.requestFacebookUser(completion: { (facebookUser) in
-                if let _ = facebookUser.email {
-                    //let info = "First name: \(facebookUser.firstName!) \n Last name: \(facebookUser.lastName!) \n Email: \(facebookUser.email!)"
-                    let parameters: [String: Any] = [
-                        "email" : usernameTextField.text as Any,
-                        "password" : passwordTextField.text as Any
-                    ]
-                    self.didLogin(method: "Facebook", info: parameters)
-                }
-            })
-        }
-    }*/
-
     private func didLogin(method: String, info: [String: Any]) {
-        /*let message = "Successfully logged in with \(method). " + info
-        let alert = UIAlertController(title: "Success", message: message, preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: "Done", style: UIAlertActionStyle.default, handler: nil))
-        self.present(alert, animated: true, completion: nil)*/
-        
-       // let storyboard = UIStoryboard(name: "Home", bundle: nil)
-        //let MainVC = storyboard.instantiateViewController(withIdentifier: "MainTableViewController")
-        //self.present(MainVC, animated: true, completion: nil)
-        
-        
-        /*Alamofire.request(cs.url+"/project/getAll", method: .get).validate().responseJSON { response in
-            switch response.result {
-            case .success(let value):
-                let json = JSON(value)
-                print("JSON: \(json)")
-            case .failure(let error):
-                print(error)
-            }
-        }*/
-        
-        //let jsonLogin = JSON()
-        
-        
         
         Alamofire.request(cs.url+"/user/login", method: .post, parameters: info, encoding: JSONEncoding.default).validate().responseJSON { response in
             switch response.result {
@@ -145,8 +96,14 @@ class LoginViewController: UIViewController {
                 let json = JSON(value)
                 if json["loggedIn"] == "true" {
                     print("logged in")
-                    UserDefaults.standard.set(self.usernameTextField.text, forKey: "userEmail")
-                    self.performSegue(withIdentifier: "toMenu", sender: nil)
+                    if UserDefaults.standard.bool(forKey: "fullyRegistred") == true {
+                        UserDefaults.standard.set(self.usernameTextField.text, forKey: "userEmail")
+                        UserDefaults.standard.set(true, forKey: "loggedIn")
+                        self.performSegue(withIdentifier: "toMenu", sender: nil)
+                    } else {
+                        self.performSegue(withIdentifier: "loginToCompleteRegister", sender: nil)
+                    }
+                    
                 } else if json["loggedIn"] == "false" {
                     print("not loggedin")
                     let message = "wrong password "
@@ -168,24 +125,6 @@ class LoginViewController: UIViewController {
             }
         }
         
-        //fetchProjects(url: cs.url+"/user/getAll")
     }
     
-    
-    
-    /*func fetchProjects(url:String){
-        Alamofire.request(url).validate().responseJSON(completionHandler:{response in
-            switch response.result{
-            case .success:
-                print("validation succesful")
-                print(response.result.value!)
-//                self.moviesArray = response.result.value! as! NSArray
-//                self.tableView.reloadData()
-            case .failure(let error):
-                print(error)
-            }
-            
-        } )
-        
-    }*/
 }

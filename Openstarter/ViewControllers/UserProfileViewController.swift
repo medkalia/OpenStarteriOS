@@ -19,6 +19,7 @@ class UserProfileViewController: UIViewController {
     @IBOutlet weak var birthdate: UILabel!
     @IBOutlet weak var bio: UILabel!
     
+    
     let email = UserDefaults.standard.string(forKey: "userEmail")
     
     override func viewDidLoad() {

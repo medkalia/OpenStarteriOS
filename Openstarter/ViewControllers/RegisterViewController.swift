@@ -19,7 +19,6 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var password: LoginTextField!
     @IBOutlet weak var confirmPassword: LoginTextField!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.startAnimation(index: 0)

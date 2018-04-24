@@ -21,7 +21,6 @@ public class LeftMenuViewController: UIViewController, UITableViewDelegate, UITa
         tableView.backgroundView = nil
         tableView.separatorStyle = .none
         tableView.bounces = false
-        
         self.tableView = tableView
         self.view.addSubview(self.tableView!)
     }
@@ -66,10 +65,9 @@ public class LeftMenuViewController: UIViewController, UITableViewDelegate, UITa
             self.sideMenuViewController!.hideMenuViewController()
             
         case 4:
-            let navToGroupProfile = UINavigationController(rootViewController: self.storyboard!.instantiateViewController(withIdentifier: "GroupProfileViewControllerIdentifier"))
-            navToGroupProfile.navigationBar.isHidden = true
-            self.sideMenuViewController!.setContentViewController(navToGroupProfile, animated: true)
             self.sideMenuViewController!.hideMenuViewController()
+            UserDefaults.standard.set(false, forKey: "loggedIn")
+            self.performSegue(withIdentifier: "logout", sender: nil)
             
             
         default:
@@ -88,7 +86,7 @@ public class LeftMenuViewController: UIViewController, UITableViewDelegate, UITa
     }
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection sectionIndex: Int) -> Int {
-        return 6
+        return 5
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -105,8 +103,8 @@ public class LeftMenuViewController: UIViewController, UITableViewDelegate, UITa
             cell!.selectedBackgroundView = UIView()
         }
         
-        var titles = ["Home", "Profile", "New Project", "Favorites", "Settings", "Log Out"]
-        var images = ["IconHome", "IconProfile", "IconProfile", "IconProfile", "IconSettings", "IconEmpty"]
+        var titles = ["Home", "Profile", "New Project", "Favorites", "Log Out"]
+        var images = ["IconHome", "IconProfile", "IconProfile", "IconProfile", "IconEmpty"]
         cell!.textLabel?.text = titles[indexPath.row]
         cell!.imageView?.image = UIImage(named: images[indexPath.row])
         

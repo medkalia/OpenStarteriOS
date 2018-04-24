@@ -11,8 +11,6 @@ target 'Openstarter' do
   	pod 'FacebookLogin'
   	pod 'FacebookShare'
     pod 'AFNetworking'
-  	pod 'TwitterKit'
-  	pod 'TwitterCore'
     pod 'FoldingCell'
     pod 'Alamofire'
     pod 'AlamofireImage'
@@ -20,6 +18,7 @@ target 'Openstarter' do
     pod 'paper-onboarding'
     pod 'SwiftyJSON'
     pod 'DateTimePicker'
+    pod 'SwiftyPickerPopover'
 
   target 'OpenstarterTests' do
     inherit! :search_paths

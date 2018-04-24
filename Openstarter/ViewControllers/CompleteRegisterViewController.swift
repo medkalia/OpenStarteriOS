@@ -16,6 +16,7 @@ class CompleteRegisterViewController: UIViewController {
     let cs = ConnectionToServer()
     var colors: [UIColor] = [UIColor(hue: 0.5444, saturation: 0.8, brightness: 0.54, alpha: 1.0), UIColor(hue: 0.5667, saturation: 0.99, brightness: 0.72, alpha: 1.0),UIColor(hue: 0.5833, saturation: 0.25, brightness: 0.27, alpha: 1.0), UIColor(hue: 0.8583, saturation: 0.16, brightness: 0.5, alpha: 1.0)]
 
+    
     @IBOutlet weak var firstName: UITextField!
     @IBOutlet weak var lastName: UITextField!
     @IBOutlet weak var bio: UITextField!
@@ -45,8 +46,6 @@ class CompleteRegisterViewController: UIViewController {
             formatter.dateFormat = "yyyy-mm-dd hh:mm:ss +zzzz"
             let myString = formatter.string(from: date)
             print(myString)
-            //let myDate = formatter.date(from: myString)
-            //let mys =
             self.birthdateLabel.text = myString
         }
     }
@@ -82,6 +81,7 @@ class CompleteRegisterViewController: UIViewController {
                 let json = JSON(value)
                 if json["type"] == "success" {
                     print("registred")
+                    UserDefaults.standard.set(true, forKey: "fullyRegistred")
                     self.performSegue(withIdentifier: "completeRegsiterToMenu", sender: nil)
                 }
                 print("JSON: \(json)")

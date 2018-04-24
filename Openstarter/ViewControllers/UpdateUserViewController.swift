@@ -23,7 +23,6 @@ class UpdateUserViewController: UIViewController {
     @IBOutlet weak var bio: UITextField!
     
     
-    
     @IBAction func update(_ sender: Any) {
         
         let updateParameters: [String: Any] = [

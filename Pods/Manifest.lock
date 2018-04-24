@@ -46,10 +46,8 @@ PODS:
     - FBSDKCoreKit (~> 4.32.0)
   - FoldingCell (3.0.6)
   - paper-onboarding (4.0.2)
-  - SwiftyJSON (4.0.0)
-  - TwitterCore (3.1.0)
-  - TwitterKit (3.3.0):
-    - TwitterCore (>= 3.1.0)
+  - SwiftyJSON (4.1.0)
+  - SwiftyPickerPopover (6.1.0)
 
 DEPENDENCIES:
   - AFNetworking
@@ -63,8 +61,7 @@ DEPENDENCIES:
   - FoldingCell
   - paper-onboarding
   - SwiftyJSON
-  - TwitterCore
-  - TwitterKit
+  - SwiftyPickerPopover
 
 SPEC CHECKSUMS:
   AFNetworking: 8ac6017b94ea105479f7776e5288e48ae9c59bb4
@@ -81,10 +78,9 @@ SPEC CHECKSUMS:
   FBSDKShareKit: 658780d0d108b8ad590a54afb5ac1427bdc8de28
   FoldingCell: 4848ec8a2056d5751bfb710df14521fc64d48ad7
   paper-onboarding: e6e2778c4e8de8db1d798bb7e3b4922e91fb7f99
-  SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
-  TwitterCore: 644d59e75abccb26cf0a9050d2c4dea0e5412241
-  TwitterKit: a2e60ddcedbf54091eac6f27685ca7a87681e1d7
+  SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
+  SwiftyPickerPopover: f1bb928efd60e4c754aa957c1bb67372465e9ccb
 
-PODFILE CHECKSUM: 2e08102aaab5683a5c7382bc081bdb0fb1ca3267
+PODFILE CHECKSUM: b4058a651c96c33f630b46ec56547939ae5be288
 
 COCOAPODS: 1.4.0
