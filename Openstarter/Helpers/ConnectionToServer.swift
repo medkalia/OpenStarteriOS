@@ -11,5 +11,5 @@ import Foundation
 public class ConnectionToServer {
     
     //var url = "http://mohamedkalia.alwaysdata.net/AndroidWS/web"
-    var url = "http://localhost/AndroidWS/web"
+    var url = "http://192.168.1.3/AndroidWS/web"
 }

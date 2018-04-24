@@ -1482,24 +1482,11 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Finish date :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ecx-tg-nh1">
                                                         <rect key="frame" x="16" y="383" width="93" height="21"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="eJj-bR-PQX">
-                                                        <rect key="frame" x="8" y="305" width="282" height="60"/>
-                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                                        <date key="date" timeIntervalSinceReferenceDate="544159350.33428895">
-                                                            <!--2018-03-31 03:22:30 +0000-->
-                                                        </date>
-                                                    </datePicker>
-                                                    <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="vZi-PJ-TsH">
-                                                        <rect key="frame" x="8" y="412" width="285" height="51"/>
-                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                                        <date key="date" timeIntervalSinceReferenceDate="544159350.33428895">
-                                                            <!--2018-03-31 03:22:30 +0000-->
-                                                        </date>
-                                                    </datePicker>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Budget :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bar-Ki-PVm">
                                                         <rect key="frame" x="19" y="488" width="65" height="21"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1529,6 +1516,9 @@
                                                         <state key="normal" title="add project">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="addProject:" destination="ctv-aw-hSV" eventType="touchUpInside" id="45f-ff-ODr"/>
+                                                        </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add images : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9dL-PC-NqQ">
                                                         <rect key="frame" x="19" y="654" width="172" height="32"/>
@@ -1544,6 +1534,22 @@
                                                             <segue destination="71f-HU-vu6" kind="show" id="LhS-pV-hc2"/>
                                                         </connections>
                                                     </button>
+                                                    <textField contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="select date" borderStyle="roundedRect" placeholder="select date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZrX-hL-74d">
+                                                        <rect key="frame" x="19" y="321" width="271" height="30"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <textField contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="select date" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RHD-B0-i9V">
+                                                        <rect key="frame" x="15" y="424" width="272" height="30"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.20563998289999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
@@ -1577,6 +1583,16 @@
                         <viewLayoutGuide key="safeArea" id="8yR-gU-Cqx"/>
                     </view>
                     <size key="freeformSize" width="375" height="1000"/>
+                    <connections>
+                        <outlet property="budhget" destination="1y6-iS-kiu" id="OMk-fq-UjZ"/>
+                        <outlet property="desc" destination="FQP-PN-c4j" id="lRF-hF-dze"/>
+                        <outlet property="finishDate" destination="RHD-B0-i9V" id="NBz-m2-Gi2"/>
+                        <outlet property="nameProject" destination="Rpg-Ip-ieg" id="nwX-3X-mj4"/>
+                        <outlet property="pickerCategorie" destination="ede-Mw-yQs" id="fP1-J3-hwK"/>
+                        <outlet property="pickerGroups" destination="1E3-tM-vaH" id="9AO-5s-cHr"/>
+                        <outlet property="shortDesc" destination="UtN-NZ-t66" id="m05-Cy-MUD"/>
+                        <outlet property="startDate" destination="ZrX-hL-74d" id="wiE-BT-Blb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CyG-Ti-1ux" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
