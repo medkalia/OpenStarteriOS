@@ -2316,10 +2316,6 @@
                                                         <rect key="frame" x="114" y="59" width="173" height="48"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                                     </pickerView>
-                                                    <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JA3-c6-ae3">
-                                                        <rect key="frame" x="27" y="568" width="247" height="72"/>
-                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                                    </pickerView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Start date :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hjy-bL-acJ">
                                                         <rect key="frame" x="19" y="281" width="86" height="21"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -2398,6 +2394,21 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8kG-Bb-XJ8">
+                                                        <rect key="frame" x="113" y="597" width="158" height="30"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OX5-a8-87z">
+                                                        <rect key="frame" x="36" y="597" width="30" height="30"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <state key="normal" title="pick"/>
+                                                        <connections>
+                                                            <action selector="didTapStringPickerWithTextField:" destination="5CP-4E-4lN" eventType="touchUpInside" id="FOl-c4-5Na"/>
+                                                        </connections>
+                                                    </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.20563998289999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
@@ -2437,14 +2448,14 @@
                         <outlet property="finishDate" destination="Nlg-7T-fff" id="tEp-Tp-UMv"/>
                         <outlet property="nameProject" destination="UjE-7a-Zf5" id="s2D-Xn-HJB"/>
                         <outlet property="pickerCategorie" destination="j3P-sp-AfV" id="50d-7U-rVR"/>
-                        <outlet property="pickerGroups" destination="JA3-c6-ae3" id="su1-Xb-SjV"/>
+                        <outlet property="selectedGroup" destination="8kG-Bb-XJ8" id="gxY-Kp-du7"/>
                         <outlet property="shortDesc" destination="qwA-Oj-NvD" id="yyC-vL-SRZ"/>
                         <outlet property="startDate" destination="axy-aa-AS5" id="zSx-cE-2Av"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5CP-4E-4lN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5617" y="-120"/>
+            <point key="canvasLocation" x="5616.8000000000002" y="-120.53973013493254"/>
         </scene>
     </scenes>
     <resources>
