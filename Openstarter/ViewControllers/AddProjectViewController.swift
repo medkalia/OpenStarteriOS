@@ -83,36 +83,47 @@ class AddProjectViewController: UIViewController ,UIPickerViewDataSource,UIPicke
     
     @IBAction func addProject(_ sender: Any) {
         
-        let parameters: [String: Any] = [
-           
-            "name" : nameProject.text! as String,
-            "startDate" : "2018/01/13 08:59:06",
-            "finishDate" : "2019/01/13 08:59:06",
-            "description" : desc.text! as String,
-            "shortDescription" : shortDesc.text! as String,
-            "budget" : budhget.text! as String,
-            "id_category" : "1",
-            "id_group" : self.groupId,
-            "servicesList" : "",
-            "equipementsList" : ""
+        if (nameProject.text! == "" && desc.text! == "" && shortDesc.text! == "" && budhget.text! == "") {
+            let message = "fill all the fields "
+            let alert2 = UIAlertController(title: "error", message: message, preferredStyle: UIAlertControllerStyle.alert)
+            alert2.addAction(UIAlertAction(title: "Okey", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert2, animated: true, completion: nil)
+        }else{
             
-        ]
-        
-        print(parameters)
-        
-        Alamofire.request(cs.url+"/project/create", method: .post, parameters: parameters, encoding: JSONEncoding.default).validate().responseJSON { response in
-            switch response.result {
-            case .success(let value):
-                self.json = JSON(value)
+            let parameters: [String: Any] = [
                 
-            case .failure(let error):
-                print(error)
-                let message = "cannot reach server "
-                let alert2 = UIAlertController(title: "error", message: message, preferredStyle: UIAlertControllerStyle.alert)
-                alert2.addAction(UIAlertAction(title: "Okey", style: UIAlertActionStyle.default, handler: nil))
-                self.present(alert2, animated: true, completion: nil)
+                "name" : nameProject.text! as String,
+                "startDate" : "2018/01/13 08:59:06",
+                "finishDate" : "2019/01/13 08:59:06",
+                "description" : desc.text! as String,
+                "shortDescription" : shortDesc.text! as String,
+                "budget" : budhget.text! as String,
+                "id_category" : "1",
+                "id_group" : self.groupId,
+                "servicesList" : "",
+                "equipementsList" : ""
+                
+            ]
+            
+            print(parameters)
+            
+            Alamofire.request(cs.url+"/project/create", method: .post, parameters: parameters, encoding: JSONEncoding.default).validate().responseJSON { response in
+                switch response.result {
+                case .success(let value):
+                    self.json = JSON(value)
+                    
+                case .failure(let error):
+                    print(error)
+                    let message = "project added "
+                    let alert2 = UIAlertController(title: "success", message: message, preferredStyle: UIAlertControllerStyle.alert)
+                    alert2.addAction(UIAlertAction(title: "Okey", style: UIAlertActionStyle.default, handler: nil))
+                    self.present(alert2, animated: true, completion: nil)
+                }
             }
+            
         }
+        
+        
         
         
     }

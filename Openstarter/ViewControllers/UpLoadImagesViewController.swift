@@ -20,7 +20,7 @@ class UpLoadImagesViewController: UIViewController {
     var images = [UIImage]()
     override func viewDidLoad() {
         super.viewDidLoad()
-        images = Array.init(repeating: #imageLiteral(resourceName: "photo"), count: 2)
+        images = Array.init(repeating: #imageLiteral(resourceName: "back"), count: 2)
         navigationItem.rightBarButtonItem = addButton
         view.backgroundColor = .white
         collectionView.backgroundColor = .clear

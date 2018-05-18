@@ -28,13 +28,15 @@ class ProjectDetailsViewController: UIViewController , UIScrollViewDelegate{
     var id:Int = 0
     var colors: [UIColor] = [UIColor(hue: 0.5444, saturation: 0.8, brightness: 0.54, alpha: 1.0), UIColor(hue: 0.5667, saturation: 0.99, brightness: 0.72, alpha: 1.0),UIColor(hue: 0.5833, saturation: 0.25, brightness: 0.27, alpha: 1.0), UIColor(hue: 0.8583, saturation: 0.16, brightness: 0.5, alpha: 1.0)]
     //color codes : "#1C6E8C", "#826C7F", "#016FB9"
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
         scrollView.delegate = self
+        
         //self.startAnimation(index: 0)
        // print("projectId",id)
-        images = [#imageLiteral(resourceName: "photo") , #imageLiteral(resourceName: "Balloon") , #imageLiteral(resourceName: "photo"),]
+        images = [#imageLiteral(resourceName: "back") , #imageLiteral(resourceName: "Balloon") , #imageLiteral(resourceName: "back"),]
         
         for image1 in 0..<images.count{
             //let ima = UIImage(named: "\(image1).png")
@@ -77,11 +79,17 @@ class ProjectDetailsViewController: UIViewController , UIScrollViewDelegate{
 
         
     }
+   
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         pageControl.currentPage = Int(scrollView.contentOffset.x / CGFloat(414))
     }
+    
+    
+    
 
+   
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
