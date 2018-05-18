@@ -63,6 +63,25 @@ DEPENDENCIES:
   - SwiftyJSON
   - SwiftyPickerPopover
 
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - AFNetworking
+    - AKSideMenu
+    - Alamofire
+    - AlamofireImage
+    - Bolts
+    - DateTimePicker
+    - FacebookCore
+    - FacebookLogin
+    - FacebookShare
+    - FBSDKCoreKit
+    - FBSDKLoginKit
+    - FBSDKShareKit
+    - FoldingCell
+    - paper-onboarding
+    - SwiftyJSON
+    - SwiftyPickerPopover
+
 SPEC CHECKSUMS:
   AFNetworking: 8ac6017b94ea105479f7776e5288e48ae9c59bb4
   AKSideMenu: 5f253516c339960e474f81c3da53540368520be5
@@ -83,4 +102,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: b4058a651c96c33f630b46ec56547939ae5be288
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.5.0

@@ -310,7 +310,6 @@
 				C8ED4C12205DB7760045B2AF /* Frameworks */,
 				C8ED4C13205DB7760045B2AF /* Resources */,
 				468D570DAA8D2AA0190D6DCF /* [CP] Embed Pods Frameworks */,
-				74373B11442D5F64464D48D7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -329,8 +328,6 @@
 				C8ED4C28205DB7760045B2AF /* Sources */,
 				C8ED4C29205DB7760045B2AF /* Frameworks */,
 				C8ED4C2A205DB7760045B2AF /* Resources */,
-				64258EE5BB443ECB1E6FA2B4 /* [CP] Embed Pods Frameworks */,
-				12A18D08642160652AC68C26 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -350,8 +347,6 @@
 				C8ED4C33205DB7760045B2AF /* Sources */,
 				C8ED4C34205DB7760045B2AF /* Frameworks */,
 				C8ED4C35205DB7760045B2AF /* Resources */,
-				6C816984CB4CED2CA5F5BE3A /* [CP] Embed Pods Frameworks */,
-				47542476FEE076229CB08654 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -448,21 +443,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		12A18D08642160652AC68C26 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OpenstarterTests/Pods-OpenstarterTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		42AEA57AA6C173E255DE6546 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -527,71 +507,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Openstarter/Pods-Openstarter-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		47542476FEE076229CB08654 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OpenstarterUITests/Pods-OpenstarterUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		64258EE5BB443ECB1E6FA2B4 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OpenstarterTests/Pods-OpenstarterTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6C816984CB4CED2CA5F5BE3A /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OpenstarterUITests/Pods-OpenstarterUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		74373B11442D5F64464D48D7 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Openstarter/Pods-Openstarter-resources.sh",
-				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterKitResources.bundle",
-				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterShareExtensionUIResources.bundle",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TwitterKitResources.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TwitterShareExtensionUIResources.bundle",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Openstarter/Pods-Openstarter-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		ACA30DD749792400EACADD88 /* [CP] Check Pods Manifest.lock */ = {

@@ -20,6 +20,7 @@ class ContentMenuViewController: UITableViewController {
    // var json = JSON()
     //var count :Int = 0
     var projectArray:NSArray = []
+    var idProject:Int = 0
     
     
     override func viewDidLoad() {
@@ -35,6 +36,7 @@ class ContentMenuViewController: UITableViewController {
                 print("validation succesful")
                 print(response.result.value!)
                 self.projectArray = response.result.value! as! NSArray
+                
                 self.tableView.reloadData()
             case .failure(let error):
                 print(error)
@@ -96,6 +98,7 @@ extension ContentMenuViewController {
         let tolbl = cell.viewWithTag(22) as? UILabel
         let deadlinelbl = cell.viewWithTag(23) as? UILabel
         let projects = projectArray[indexPath.row] as! Dictionary<String,Any>
+       // self.idProject = String(describing: projects["id"]!)
         nameLbl_out?.text = projects["name"] as? String
         descLbl_out?.text =  projects["shortDescription"]  as? String
         followsLbl_out?.text = projects["followCount"] as? String
@@ -112,6 +115,7 @@ extension ContentMenuViewController {
         fromlbl?.text = projects["startDate"] as? String
         tolbl?.text = projects["finishDate"] as? String
         deadlinelbl?.text = "4days"
+        print("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",self.idProject)
         return cell
     }
     
@@ -122,17 +126,23 @@ extension ContentMenuViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let cell = tableView.cellForRow(at: indexPath) as! FoldingCell
-        
+      
         if cell.isAnimating() {
             return
         }
         
         var duration = 0.0
         let cellIsCollapsed = cellHeights[indexPath.row] == kCloseCellHeight
+        let projects = projectArray[indexPath.row] as! Dictionary<String,Any>
+        print(projects["id"]!)
+        self.idProject = projects["id"]! as! Int
+        
         if cellIsCollapsed {
+            
             cellHeights[indexPath.row] = kOpenCellHeight
             cell.unfold(true, animated: true, completion: nil)
             duration = 0.5
+            
         } else {
             cellHeights[indexPath.row] = kCloseCellHeight
             cell.unfold(false, animated: true, completion: nil)
@@ -142,6 +152,16 @@ extension ContentMenuViewController {
         UIView.animate(withDuration: duration, delay: 0, options: .curveEaseOut, animations: { () -> Void in
             tableView.beginUpdates()
             tableView.endUpdates()
+            
         }, completion: nil)
+       
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "details"{
+            if let destinationVC = segue.destination as? ProjectDetailsViewController {
+                destinationVC.id = self.idProject
+                print(self.idProject)
+            }
+        }
     }
 }
