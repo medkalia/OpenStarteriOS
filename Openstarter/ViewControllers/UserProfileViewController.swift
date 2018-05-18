@@ -18,6 +18,7 @@ class UserProfileViewController: UIViewController {
     @IBOutlet weak var collaborations: UILabel!
     @IBOutlet weak var birthdate: UILabel!
     @IBOutlet weak var bio: UILabel!
+    @IBOutlet weak var medal: UIImageView!
     
     
     let email = UserDefaults.standard.string(forKey: "userEmail")
@@ -45,6 +46,23 @@ class UserProfileViewController: UIViewController {
                     self.collaborations.text = "\(json["projectsCount"])"
                     self.birthdate.text = json["birthDate"].string!
                     self.bio.text = json["bio"].string!
+                    
+                    
+                    if json["contributions"].int! == 0 {
+                        
+                        self.medal.image = UIImage(named: "bronze")
+                        
+                    } else if json["contributions"].int! == 1 {
+                        
+                        self.medal.image = UIImage(named: "silver")
+                        
+                    } else if json["contributions"].int! >= 2 {
+                        
+                        self.medal.image = UIImage(named: "gold")
+                    
+                    }
+                    
+                    
                     
                     print(json["firstName"].string!)
 

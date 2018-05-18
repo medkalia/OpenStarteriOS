@@ -10,6 +10,7 @@
 		4C186086A6840EBA57BBD61B /* Pods_OpenstarterUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F10178F838181B844F42168 /* Pods_OpenstarterUITests.framework */; };
 		56054ADACDFBA308F0CFC0E3 /* Pods_Openstarter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F34A6828CA93A88FEB9B5E6 /* Pods_Openstarter.framework */; };
 		C829D4DD2087FB200057AE22 /* UpdateUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C829D4DC2087FB200057AE22 /* UpdateUserViewController.swift */; };
+		C836FAE82096007300598B45 /* GroupUpdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C836FAE72096007300598B45 /* GroupUpdateViewController.swift */; };
 		C847CBF5207FBB4D008069D6 /* FavoriteProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C847CBF4207FBB4D008069D6 /* FavoriteProjectsViewController.swift */; };
 		C8626872206D664900628A33 /* ProjectDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8626871206D664900628A33 /* ProjectDetailsViewController.swift */; };
 		C8626874206D719900628A33 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8626873206D719900628A33 /* CardView.swift */; };
@@ -17,6 +18,7 @@
 		C862687B206DA0E000628A33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C862687A206DA0DF00628A33 /* Assets.xcassets */; };
 		C862687D206DA31000628A33 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C862687C206DA31000628A33 /* UserProfileViewController.swift */; };
 		C862687F206DA6BC00628A33 /* CompleteRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C862687E206DA6BC00628A33 /* CompleteRegisterViewController.swift */; };
+		C8639B022096742A0052E56C /* MemberListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8639B012096742A0052E56C /* MemberListViewController.swift */; };
 		C897B631208A5E36009CE5E9 /* CollaborationGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C897B630208A5E36009CE5E9 /* CollaborationGroupViewController.swift */; };
 		C8C515CC20656D2E003B9B74 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C515CB20656D2E003B9B74 /* MenuViewController.swift */; };
 		C8C515E620657B9A003B9B74 /* LeftMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C515E520657B9A003B9B74 /* LeftMenuViewController.swift */; };
@@ -81,6 +83,7 @@
 		8F34A6828CA93A88FEB9B5E6 /* Pods_Openstarter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Openstarter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		931ECA1D2F633EC31EC4346E /* Pods-Openstarter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Openstarter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Openstarter/Pods-Openstarter.debug.xcconfig"; sourceTree = "<group>"; };
 		C829D4DC2087FB200057AE22 /* UpdateUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateUserViewController.swift; sourceTree = "<group>"; };
+		C836FAE72096007300598B45 /* GroupUpdateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupUpdateViewController.swift; sourceTree = "<group>"; };
 		C847CBF4207FBB4D008069D6 /* FavoriteProjectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteProjectsViewController.swift; sourceTree = "<group>"; };
 		C8626871206D664900628A33 /* ProjectDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailsViewController.swift; sourceTree = "<group>"; };
 		C8626873206D719900628A33 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
@@ -88,6 +91,7 @@
 		C862687A206DA0DF00628A33 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C862687C206DA31000628A33 /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
 		C862687E206DA6BC00628A33 /* CompleteRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteRegisterViewController.swift; sourceTree = "<group>"; };
+		C8639B012096742A0052E56C /* MemberListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberListViewController.swift; sourceTree = "<group>"; };
 		C897B630208A5E36009CE5E9 /* CollaborationGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollaborationGroupViewController.swift; sourceTree = "<group>"; };
 		C8C515CB20656D2E003B9B74 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		C8C515E520657B9A003B9B74 /* LeftMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftMenuViewController.swift; sourceTree = "<group>"; };
@@ -285,6 +289,8 @@
 				C847CBF4207FBB4D008069D6 /* FavoriteProjectsViewController.swift */,
 				C829D4DC2087FB200057AE22 /* UpdateUserViewController.swift */,
 				C897B630208A5E36009CE5E9 /* CollaborationGroupViewController.swift */,
+				C836FAE72096007300598B45 /* GroupUpdateViewController.swift */,
+				C8639B012096742A0052E56C /* MemberListViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -644,12 +650,14 @@
 				C8ED4C99205DCFB40045B2AF /* LoginTextField.swift in Sources */,
 				C8ED4C97205DCFB40045B2AF /* LoginButton.swift in Sources */,
 				C897B631208A5E36009CE5E9 /* CollaborationGroupViewController.swift in Sources */,
+				C836FAE82096007300598B45 /* GroupUpdateViewController.swift in Sources */,
 				C8EAD89A2060041B00A8FC01 /* DemoCell.swift in Sources */,
 				C8ED4C94205DCFB40045B2AF /* FacebookPost.swift in Sources */,
 				C8C515CC20656D2E003B9B74 /* MenuViewController.swift in Sources */,
 				C847CBF5207FBB4D008069D6 /* FavoriteProjectsViewController.swift in Sources */,
 				C8626874206D719900628A33 /* CardView.swift in Sources */,
 				C8C515E620657B9A003B9B74 /* LeftMenuViewController.swift in Sources */,
+				C8639B022096742A0052E56C /* MemberListViewController.swift in Sources */,
 				F51C7794207CDEFC005B6030 /* UpLoadImagesViewController.swift in Sources */,
 				C8ED4C19205DB7760045B2AF /* AppDelegate.swift in Sources */,
 				C8ED4C21205DB7760045B2AF /* Openstarter.xcdatamodeld in Sources */,

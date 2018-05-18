@@ -63,45 +63,6 @@ class CollaborationGroupViewController: UIViewController {
     }
     
     
-    @IBAction func tappedStringPickerButton(_ sender: UIButton) {
-        /// Replace a string with the string to be display.
-        
-        //let numberWords = ["one", "two", "three"]
-        
-        
-        
-        
-        let displayStringFor:((String?)->String?)? = { string in
-            if let s = string {
-                switch(s){
-                case "value 1":
-                    return "😊"
-                case "value 2":
-                    return "😏"
-                case "value 3":
-                    return "😓"
-                default:
-                    return s
-                }
-            }
-            return nil
-        }
-        
-        /// Create StringPickerPopover:
-        let p = StringPickerPopover(title: "StringPicker", choices: ["value 1","value 2","value 3"])
-            .setDisplayStringFor(displayStringFor)
-            .setFont(UIFont.boldSystemFont(ofSize: 14))
-            .setFontColor(.blue)
-            .setDoneButton(
-                action: {  popover, selectedRow, selectedString in
-                    print("done row \(selectedRow) \(selectedString)")
-            })
-            .setCancelButton(action: {_, _, _ in
-                print("cancel") })
-        p.appear(originView: sender, baseViewController: self)
-        p.disappearAutomatically(after: 3.0, completion: { print("automatically hidden")} )
-        
-    }
     
     @IBAction func didTapStringPickerWithTextField(_ sender: UITextField) {
         var names : [String] = []
@@ -114,18 +75,129 @@ class CollaborationGroupViewController: UIViewController {
             .setDoneButton(action: { popover, selectedRow, selectedString in
                 //sender.text = selectedString
                 self.selectedGroup.text = selectedString
+                
+                for groupItem in self.json.arrayValue {
+                    if groupItem["name"].string == selectedString {
+                        // self.groupId = groupItem["id"].string!
+                        
+                        self.name.text = groupItem["name"].stringValue
+                        self.members.text = groupItem["countMembers"].stringValue
+                        self.projects.text = groupItem["projectsCount"].stringValue
+                        self.creationDate.text = groupItem["creationDate"].stringValue
+                        
+                        //print("intern",self.groupId)
+                    }
+                    
+                }
+                
             })
             .appear(originView: sender, baseViewController: self)
         
     }
     
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toUpdateGroup" {
+            if let destinationVC = segue.destination as? GroupUpdateViewController {
+                destinationVC.oldName = self.selectedGroup.text
+            }
+        } else if segue.identifier == "toMembers" {
+            if let destinationVC = segue.destination as? MemberListViewController {
+                destinationVC.oldName = self.selectedGroup.text
+            }
+        }
+    }
+    
+    @IBAction func editGroup(_ sender: Any) {
+        performSegue(withIdentifier: "toUpdateGroup", sender: UIButton.self)
+    }
+    
 
+    
+    @IBAction func members(_ sender: Any) {
+        performSegue(withIdentifier: "toMembers", sender: UIButton.self)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
 
+    @IBAction func addGroup(_ sender: Any) {
+        
+        let alert = UIAlertController(title: "Add a new group", message: "", preferredStyle: .alert)
+        
+        
+        
+        //2. Add the text field. You can configure it however you need.
+        
+        alert.addTextField { (textField) in
+            
+            textField.text = ""
+            
+        }
+        
+        
+        
+        // 3. Grab the value from the text field, and print it when the user clicks OK.
+        
+        
+        
+        alert.addAction(UIAlertAction(title: "Add group", style: .default, handler: { [weak alert] (_) in
+            
+            let textField = alert?.textFields![0] // Force unwrapping because we know it exists.
+            
+            //print("Text field: \(textField?.text)")
+            
+            //EZLoadingActivity.show("Sending ...", disableUI: false)
+            
+            let parameters:Parameters=[
+                "name" : textField?.text,
+                "creatorEmail": self.email
+            ]
+            
+            Alamofire.request(self.cs.url+"/collaborationGroup/new", method: .post, parameters: parameters, encoding: JSONEncoding.default).validate().responseJSON { response in
+                switch response.result {
+                case .success(let value):
+                    self.json = JSON(value)
+                    
+                    if self.json["type"] == "success" {
+                        print("group addded")
+                        
+                    } else {
+                        print("JSON: \(self.json)")
+                        let message = "this use has no groups"
+                        let alert2 = UIAlertController(title: "Wrong", message: message, preferredStyle: UIAlertControllerStyle.alert)
+                        alert2.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+                        self.present(alert2, animated: true, completion: nil)
+                    }
+                    
+                case .failure(let error):
+                    print(error)
+                    let message = "cannot reach server "
+                    let alert2 = UIAlertController(title: "error", message: message, preferredStyle: UIAlertControllerStyle.alert)
+                    alert2.addAction(UIAlertAction(title: "Okey", style: UIAlertActionStyle.default, handler: nil))
+                    self.present(alert2, animated: true, completion: nil)
+                }
+            }
+            
+            
+            
+            
+            
+        }))
+        
+        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.default, handler: nil))
+        
+        
+        
+        // 4. Present the alert.
+        
+        self.present(alert, animated: true, completion: nil)
+        
+    }
     
     
 }

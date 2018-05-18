@@ -28,6 +28,7 @@ class ContentMenuViewController: UITableViewController {
        fetchProjects(url:cs.url+"/project/getAll")
        
     }
+    
     func fetchProjects(url:String){
         Alamofire.request(url).validate().responseJSON(completionHandler:{response in
             switch response.result{
